@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Actualités - Tennis Club de Hayange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-image: url('../photos_site/banniere.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #005599;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #003366;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-images img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    .facebook-link {
+      margin-top: 10px;
+      display: block;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../photos_site/logo.jpeg" alt="Logo du Tennis Club">
+    <h1>Tennis Club de Hayange</h1>
+    <p>Sport, passion et convivialité</p>
+  </header>
+
+  <nav>
+    <a href="../menu/index.html">Accueil</a>
+    <a href="../menu/horaires.html">Horaires</a>
+    <a href="../menu/actualites.html">Actualités</a>
+    <a href="../menu/ecole.html">École de Tennis</a>
+    <a href="../menu/tarifs.html">Tarifs</a>
+    <a href="../menu/comite.html">Comité</a>
+    <a href="../menu/contact.html">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h2>Actualités</h2>
+
+    <!-- NOUVEAU POST -->
+    <h3>Deuxième dimanche des championnats SENIORS PRINTEMPS</h3>
+    <p>
+      De très bons résultats pour l’ensemble des équipes :
+      <br><br>
+      Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange au terme d’un Double « d’enfer »<br>
+      Les Hommes Hayange 2 gagnent 6/0 contre Uckange<br>
+      Les Hommes Hayange 3 gagnent 5/0 contre Tremery<br><br>
+      Les Dames Hayange 1 gagnent 6/0 contre Terville à Hayange<br>
+      Les Dames Hayange 2 perdent 2/3 contre Ottange avec le regret d’un 7/10 au super tie break du double…
+    </p>
+
+    <div class="carousel" id="carousel-printemps">
+      <div class="carousel-images">
+        <img src="../photos_actu/tournoi1.jpeg" alt="Photo printemps 1">
+        <img src="../photos_actu/tournoi2.jpeg" alt="Photo printemps 2">
+        <img src="../photos_actu/tournoi3.jpeg" alt="Photo printemps 3">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('printemps', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('printemps', 1)">&#10095;</button>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Tournoi -->
+    <h3>Tournoi 2025</h3>
+    <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
+    
+    <div class="carousel" id="carousel-tournoi">
+      <div class="carousel-images">
+        <img src="../photos_actu/actu1.jpeg" alt="Photo du tournoi 1">
+        <img src="../photos_actu/actu2.jpeg" alt="Photo du tournoi 2">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('tournoi', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('tournoi', 1)">&#10095;</button>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Terrain extérieur -->
+    <h3>Les terrains extérieurs sont prêts !</h3>
+    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club. Voici quelques photos :</p>
+
+    <div class="carousel" id="carousel-terrains">
+      <div class="carousel-images">
+        <img src="../photos_actu/terrain1.jpeg" alt="Terrain extérieur 1">
+        <img src="../photos_actu/terrain2.jpeg" alt="Terrain extérieur 2">
+        <img src="../photos_actu/terrain3.jpeg" alt="Terrain extérieur 3">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('terrains', 1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Tennis Club de Hayange - Tous droits réservés
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+  </footer>
+
+  <script>
+    let currentSlides = {
+      printemps: 0,
+      tournoi: 0,
+      terrains: 0
+    };
+
+    function moveSlide(carousel, direction) {
+      const carousels = {
+        printemps: 3,
+        tournoi: 2,
+        terrains: 3
+      };
+
+      currentSlides[carousel] += direction;
+
+      if (currentSlides[carousel] < 0) {
+        currentSlides[carousel] = carousels[carousel] - 1;
+      } else if (currentSlides[carousel] >= carousels[carousel]) {
+        currentSlides[carousel] = 0;
+      }
+
+      const images = document.querySelector(`#carousel-${carousel} .carousel-images`);
+      const offset = -currentSlides[carousel] * 100;
+      images.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+
+</body>
+</html>

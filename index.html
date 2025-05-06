@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tennis Club de Hayange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Bannière avec image de fond */
+    header {
+      background-image: url('../photos_site/banniere.jpeg'); /* Image de la bannière */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 20px; /* Augmenter le padding pour ajuster la hauteur */
+      text-align: center;
+      position: relative;
+    }
+
+    header h1, header p {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour le texte */
+      font-size: 2.5em;
+    }
+
+    /* Effet sur le texte du titre et de la description */
+    header h1 {
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 10px;
+      border: 2px solid white; /* Contour autour du texte */
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #005599;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #003366;
+    }
+
+    /* Contenu principal */
+    .content {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+
+    .facebook-link {
+      margin-top: 10px;
+      display: block;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../photos_site/logo.jpeg" alt="Logo du Tennis Club">
+    <h1>Tennis Club de Hayange</h1>
+    <p>Sport, passion et convivialité</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="horaires.html">Horaires</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="ecole.html">École de Tennis</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="comite.html">Comité</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h2>Bienvenue sur notre site !</h2>
+    <p>Le Tennis Club de Hayange vous accueille toute l’année pour pratiquer le tennis en loisir ou en compétition. Rejoignez-nous et partagez notre passion du tennis !</p>
+    <img src="../photos_site/club.jpg" alt="Photo du club">
+  </div>
+
+  <footer>
+    &copy; 2025 Tennis Club de Hayange - Tous droits réservés
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+  </footer>
+
+</body>
+</html>

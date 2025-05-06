@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Tennis Club de Hayange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+    }
+
+    nav {
+      background-color: #005599;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #003366;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #005599;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #ccc;
+      margin-bottom: 40px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #005599;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #005599;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #003366;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+  <a href="index.html">Accueil</a>
+  <a href="horaires.html">Horaires</a>
+  <a href="actualites.html">Actualités</a>
+  <a href="ecole.html">École de Tennis</a>
+  <a href="tarifs.html">Tarifs</a>
+  <a href="comite.html">Comité</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+  <div class="content">
+    <h1>Contactez-nous</h1>
+
+    <div class="contact-form">
+      <h2>Formulaire de Contact</h2>
+      <form action="envoyer_message.php" method="post">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+
+    <p><strong>Email :</strong> <a href="mailto:tennisclubhayange@orange.fr">tennisclubhayange@orange.fr</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Tennis Club de Hayange
+  </footer>
+
+</body>
+</html>
