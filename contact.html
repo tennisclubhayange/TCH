@@ -6,21 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-image: url('photos_site/banniere.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
     }
 
     nav {
       background-color: #005599;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
-      display: inline-block;
       font-weight: bold;
     }
 
@@ -29,46 +47,31 @@
     }
 
     .content {
+      padding: 20px;
       max-width: 900px;
       margin: auto;
-      padding: 20px;
     }
 
-    h1 {
-      text-align: center;
-      color: #005599;
+    form {
+      display: flex;
+      flex-direction: column;
     }
 
-    .contact-form {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px #ccc;
-      margin-bottom: 40px;
-    }
-
-    .contact-form h2 {
-      text-align: center;
-      color: #005599;
-    }
-
-    .contact-form label {
-      display: block;
-      margin-bottom: 8px;
+    label {
+      margin-top: 10px;
       font-weight: bold;
     }
 
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
+    input, textarea {
+      padding: 8px;
+      margin-top: 5px;
       border-radius: 5px;
       border: 1px solid #ccc;
     }
 
-    .contact-form button {
-      padding: 10px 20px;
+    button {
+      margin-top: 15px;
+      padding: 10px;
       background-color: #005599;
       color: white;
       border: none;
@@ -76,7 +79,7 @@
       cursor: pointer;
     }
 
-    .contact-form button:hover {
+    button:hover {
       background-color: #003366;
     }
 
@@ -87,44 +90,52 @@
       padding: 10px;
       margin-top: 40px;
     }
+
+    .facebook-link {
+      margin-top: 10px;
+      display: block;
+      color: #ffffff;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
+  <header>
+    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club">
+    <h1>Tennis Club de Hayange</h1>
+    <p>Sport, passion et convivialité</p>
+  </header>
+
   <nav>
-  <a href="index.html">Accueil</a>
-  <a href="horaires.html">Horaires</a>
-  <a href="actualites.html">Actualités</a>
-  <a href="ecole.html">École de Tennis</a>
-  <a href="tarifs.html">Tarifs</a>
-  <a href="comite.html">Comité</a>
-  <a href="contact.html">Contact</a>
-</nav>
+    <a href="index.html">Accueil</a>
+    <a href="horaires.html">Horaires</a>
+    <a href="actualites.html">Actualités</a>
+    <a href="ecole.html">École de Tennis</a>
+    <a href="tarifs.html">Tarifs</a>
+    <a href="comite.html">Comité</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <div class="content">
-    <h1>Contactez-nous</h1>
+    <h2>Contactez-nous</h2>
+    <form>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
 
-    <div class="contact-form">
-      <h2>Formulaire de Contact</h2>
-      <form action="envoyer_message.php" method="post">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br>
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br>
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-
-    <p><strong>Email :</strong> <a href="mailto:tennisclubhayange@orange.fr">tennisclubhayange@orange.fr</a></p>
+      <button type="submit">Envoyer</button>
+    </form>
   </div>
 
   <footer>
-    &copy; 2025 Tennis Club de Hayange
+    &copy; 2025 Tennis Club de Hayange - Tous droits réservés
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
   </footer>
 
 </body>
