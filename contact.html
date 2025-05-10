@@ -119,12 +119,8 @@
 
   <div class="content">
     <h2>Contactez-nous</h2>
-    <form action="https://formsubmit.co/tennisclubhayange@orange.fr" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Nouveau message depuis le site du Tennis Club de Hayange">
-      <input type="hidden" name="_template" value="box">
-      <input type="hidden" name="_next" value="https://tonutilisateur.github.io/merci.html">
-
+    <!-- Formulaire Formspree -->
+    <form action="https://formspree.io/f/mnqwrxyz" method="POST">
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="nom" required>
 
@@ -133,6 +129,9 @@
 
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="5" required></textarea>
+
+      <!-- Redirection vers la page merci.html après soumission -->
+      <input type="hidden" name="_redirect" value="https://tennisclubhayange.github.io/merci.html">
 
       <button type="submit">Envoyer</button>
     </form>
