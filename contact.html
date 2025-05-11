@@ -52,35 +52,23 @@
       margin: auto;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
 
-    label {
-      margin-top: 10px;
-      font-weight: bold;
+    ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
     }
 
-    input, textarea {
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    a {
+      color: #005599;
+      text-decoration: none;
     }
 
-    button {
-      margin-top: 15px;
-      padding: 10px;
-      background-color: #005599;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #003366;
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -119,18 +107,12 @@
 
   <div class="content">
     <h2>Contactez-nous</h2>
-    <form action="https://formspree.io/f/mgvkzjne" method="POST">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="nom" required>
-
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Envoyer</button>
-    </form>
+    <p>Vous pouvez nous contacter par les moyens suivants :</p>
+    <ul>
+      <li><strong>Email :</strong> <a href="mailto:tennisclubhayange@orange.fr">tennisclubhayange@orange.fr</a></li>
+      <li><strong>Téléphone :</strong> <a href="tel:+33382857790">03 82 85 77 90</a></li>
+      <li><strong>Facebook :</strong> <a href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Tennis Club de Hayange</a></li>
+    </ul>
   </div>
 
   <footer>
