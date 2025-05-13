@@ -66,14 +66,13 @@
       position: relative;
       width: 100%;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 20px auto;
       overflow: hidden;
     }
 
     .carousel-images {
       display: flex;
       transition: transform 0.5s ease;
-      width: 100%;
     }
 
     .carousel-images img {
@@ -139,30 +138,29 @@
     <h2>Actualités</h2>
 
     <h3>Retour sur la 3e journée des championnats SENIORS PRINTEMPS – Dimanche 11 mai</h3>
-    <p>Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end, à domicile comme à l’extérieur !</p>
-
-    <h4>Résultats :</h4>
-    <p><strong>À DOMICILE (Hayange)</strong></p>
-    <ul>
-      <li>Hommes 1 vs Mont St Martin : match nul 3-3</li>
-      <li>Hommes 2 vs Trémery : match nul 3-3</li>
-      <li>Dames 2 vs Thionville Guentrange : victoire 5-0</li>
-    </ul>
-
-    <p><strong>À L’EXTÉRIEUR</strong></p>
-    <ul>
-      <li>Dames 1 à Ennery : victoire 6-0</li>
-      <li>Hommes 3 à Algrange : défaite 0-5</li>
-    </ul>
-
-    <p>Bravo à toutes nos équipes pour leur engagement et leurs performances !</p>
-    <p>Merci à tous ceux qui sont venus encourager nos joueurs et joueuses.</p>
+    <p>
+      Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end, à domicile comme à l’extérieur !
+      <br><br>
+      <strong>Résultats :</strong><br>
+      <u>À DOMICILE (Hayange)</u><br>
+      • Hommes 1 vs Mont St Martin : match nul 3-3<br>
+      • Hommes 2 vs Trémery : match nul 3-3<br>
+      • Dames 2 vs Thionville Guentrange : victoire 5-0<br><br>
+      <u>À L’EXTÉRIEUR</u><br>
+      • Dames 1 à Ennery : victoire 6-0<br>
+      • Hommes 3 à Algrange : défaite 0-5<br><br>
+      Bravo à toutes nos équipes pour leur engagement et leurs performances !<br>
+      Merci à tous ceux qui sont venus encourager nos joueurs et joueuses.
+    </p>
 
     <div class="carousel" id="carousel-11mai">
       <div class="carousel-images">
         <img src="photos_actu/11mai1.jpeg" alt="Photo 11 mai 1">
         <img src="photos_actu/11mai2.jpeg" alt="Photo 11 mai 2">
         <img src="photos_actu/11mai3.jpeg" alt="Photo 11 mai 3">
+        <img src="photos_actu/11mai4.jpeg" alt="Photo 11 mai 4">
+        <img src="photos_actu/11mai5.jpeg" alt="Photo 11 mai 5">
+        <img src="photos_actu/11mai6.jpeg" alt="Photo 11 mai 6">
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('11mai', -1)">&#10094;</button>
@@ -170,9 +168,94 @@
       </div>
     </div>
 
-    <hr>
+    <br><br>
 
     <h3>Deuxième dimanche des championnats SENIORS PRINTEMPS</h3>
     <p>
       De très bons résultats pour l’ensemble des équipes :<br><br>
-      Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange
+      Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange au terme d’un Double « d’enfer »<br>
+      Les Hommes Hayange 2 gagnent 6/0 contre Uckange<br>
+      Les Hommes Hayange 3 gagnent 5/0 contre Tremery<br><br>
+      Les Dames Hayange 1 gagnent 6/0 contre Terville à Hayange<br>
+      Les Dames Hayange 2 perdent 2/3 contre Ottange avec le regret d’un 7/10 au super tie break du double…
+    </p>
+
+    <div class="carousel" id="carousel-printemps">
+      <div class="carousel-images">
+        <img src="photos_actu/tournoi1.jpeg" alt="Photo printemps 1">
+        <img src="photos_actu/tournoi2.jpeg" alt="Photo printemps 2">
+        <img src="photos_actu/tournoi3.jpeg" alt="Photo printemps 3">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('printemps', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('printemps', 1)">&#10095;</button>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3>Tournoi 2025</h3>
+    <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
+    
+    <div class="carousel" id="carousel-tournoi">
+      <div class="carousel-images">
+        <img src="photos_actu/actu1.jpeg" alt="Photo du tournoi 1">
+        <img src="photos_actu/actu2.jpeg" alt="Photo du tournoi 2">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('tournoi', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('tournoi', 1)">&#10095;</button>
+      </div>
+    </div>
+
+    <br><br>
+
+    <h3>Les terrains extérieurs sont prêts !</h3>
+    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club.</p>
+
+    <div class="carousel" id="carousel-terrains">
+      <div class="carousel-images">
+        <img src="photos_actu/terrain1.jpeg" alt="Terrain extérieur 1">
+        <img src="photos_actu/terrain2.jpeg" alt="Terrain extérieur 2">
+        <img src="photos_actu/terrain3.jpeg" alt="Terrain extérieur 3">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('terrains', 1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Tennis Club de Hayange - Tous droits réservés
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+  </footer>
+
+  <script>
+    let currentSlides = {
+      printemps: 0,
+      tournoi: 0,
+      terrains: 0,
+      '11mai': 0
+    };
+
+    function moveSlide(carousel, direction) {
+      const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
+      const images = carouselElement.querySelectorAll('img');
+      const total = images.length;
+
+      currentSlides[carousel] += direction;
+
+      if (currentSlides[carousel] < 0) {
+        currentSlides[carousel] = total - 1;
+      } else if (currentSlides[carousel] >= total) {
+        currentSlides[carousel] = 0;
+      }
+
+      const offset = -currentSlides[carousel] * 100;
+      carouselElement.style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+
+</body>
+</html>
