@@ -68,12 +68,12 @@
       max-width: 600px;
       margin: 0 auto;
       overflow: hidden;
+      border-radius: 10px;
     }
 
     .carousel-images {
       display: flex;
       transition: transform 0.5s ease;
-      width: 100%;
     }
 
     .carousel-images img {
@@ -99,6 +99,13 @@
       padding: 10px;
       border: none;
       cursor: pointer;
+      font-size: 24px;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .carousel-button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
     }
 
     footer {
@@ -115,12 +122,58 @@
       color: #ffffff;
       text-decoration: underline;
     }
+
+    /* Bouton retour haut */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #005599;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      display: none;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #003366;
+    }
+
+    /* Animation au chargement */
+    .content h2, .content h3, .content p {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        padding: 10px;
+        border-top: 1px solid #004080;
+      }
+
+      .carousel-images img {
+        max-height: 250px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club">
+    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club de Hayange">
     <h1>Tennis Club de Hayange</h1>
     <p>Sport, passion et convivialité</p>
   </header>
@@ -140,7 +193,7 @@
 
     <h3>Retour sur la 3e journée des championnats SENIORS PRINTEMPS – Dimanche 11 mai</h3>
     <p>
-      Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end, à domicile comme à l’extérieur !<br><br>
+      Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end !<br><br>
       <strong>Résultats :</strong><br><br>
       <strong>À DOMICILE (Hayange)</strong><br>
       • Hommes 1 vs Mont St Martin : match nul 3-3<br>
@@ -149,18 +202,17 @@
       <strong>À L’EXTÉRIEUR</strong><br>
       • Dames 1 à Ennery : victoire 6-0<br>
       • Hommes 3 à Algrange : défaite 0-5<br><br>
-      Bravo à toutes nos équipes pour leur engagement et leurs performances !<br>
-      Merci à tous ceux qui sont venus encourager nos joueurs et joueuses.
+      Bravo à toutes nos équipes pour leur engagement !
     </p>
 
     <div class="carousel" id="carousel-11mai">
       <div class="carousel-images">
-        <img src="photos_site/11mai1.jpeg" alt="Photo 11 mai 1">
-        <img src="photos_site/11mai2.jpeg" alt="Photo 11 mai 2">
-        <img src="photos_site/11mai3.jpeg" alt="Photo 11 mai 3">
-        <img src="photos_site/11mai4.jpeg" alt="Photo 11 mai 4">
-        <img src="photos_site/11mai5.jpeg" alt="Photo 11 mai 5">
-        <img src="photos_site/11mai6.jpeg" alt="Photo 11 mai 6">
+        <img src="photos_site/11mai1.jpeg" alt="Match à Hayange le 11 mai 1">
+        <img src="photos_site/11mai2.jpeg" alt="Match à Hayange le 11 mai 2">
+        <img src="photos_site/11mai3.jpeg" alt="Match à Hayange le 11 mai 3">
+        <img src="photos_site/11mai4.jpeg" alt="Match à Hayange le 11 mai 4">
+        <img src="photos_site/11mai5.jpeg" alt="Match à Hayange le 11 mai 5">
+        <img src="photos_site/11mai6.jpeg" alt="Match à Hayange le 11 mai 6">
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('11mai', -1)">&#10094;</button>
@@ -172,19 +224,19 @@
 
     <h3>Deuxième dimanche des championnats SENIORS PRINTEMPS</h3>
     <p>
-      De très bons résultats pour l’ensemble des équipes :<br><br>
-      Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange au terme d’un Double « d’enfer »<br>
-      Les Hommes Hayange 2 gagnent 6/0 contre Uckange<br>
-      Les Hommes Hayange 3 gagnent 5/0 contre Tremery<br><br>
-      Les Dames Hayange 1 gagnent 6/0 contre Terville à Hayange<br>
-      Les Dames Hayange 2 perdent 2/3 contre Ottange avec le regret d’un 7/10 au super tie break du double…
+      De très bons résultats pour toutes les équipes :<br><br>
+      • Hommes 1 : victoire 4-2 contre Grand Verdun<br>
+      • Hommes 2 : victoire 6-0 contre Uckange<br>
+      • Hommes 3 : victoire 5-0 contre Trémery<br>
+      • Dames 1 : victoire 6-0 contre Terville<br>
+      • Dames 2 : défaite 2-3 contre Ottange
     </p>
 
     <div class="carousel" id="carousel-printemps">
       <div class="carousel-images">
-        <img src="photos_actu/tournoi1.jpeg" alt="Photo printemps 1">
-        <img src="photos_actu/tournoi2.jpeg" alt="Photo printemps 2">
-        <img src="photos_actu/tournoi3.jpeg" alt="Photo printemps 3">
+        <img src="photos_actu/tournoi1.jpeg" alt="Rencontre de printemps 1">
+        <img src="photos_actu/tournoi2.jpeg" alt="Rencontre de printemps 2">
+        <img src="photos_actu/tournoi3.jpeg" alt="Rencontre de printemps 3">
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('printemps', -1)">&#10094;</button>
@@ -195,12 +247,12 @@
     <br><br>
 
     <h3>Tournoi 2025</h3>
-    <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
+    <p>Le tournoi annuel a eu lieu avec succès ! Voici quelques photos :</p>
     
     <div class="carousel" id="carousel-tournoi">
       <div class="carousel-images">
-        <img src="photos_actu/actu1.jpeg" alt="Photo du tournoi 1">
-        <img src="photos_actu/actu2.jpeg" alt="Photo du tournoi 2">
+        <img src="photos_actu/actu1.jpeg" alt="Tournoi 2025 - Photo 1">
+        <img src="photos_actu/actu2.jpeg" alt="Tournoi 2025 - Photo 2">
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('tournoi', -1)">&#10094;</button>
@@ -211,13 +263,13 @@
     <br><br>
 
     <h3>Les terrains extérieurs sont prêts !</h3>
-    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club.</p>
+    <p>Les terrains rénovés sont maintenant accessibles à tous les membres du club.</p>
 
     <div class="carousel" id="carousel-terrains">
       <div class="carousel-images">
-        <img src="photos_actu/terrain1.jpeg" alt="Terrain extérieur 1">
-        <img src="photos_actu/terrain2.jpeg" alt="Terrain extérieur 2">
-        <img src="photos_actu/terrain3.jpeg" alt="Terrain extérieur 3">
+        <img src="photos_actu/terrain1.jpeg" alt="Terrains rénovés 1">
+        <img src="photos_actu/terrain2.jpeg" alt="Terrains rénovés 2">
+        <img src="photos_actu/terrain3.jpeg" alt="Terrains rénovés 3">
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
@@ -230,6 +282,8 @@
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
     <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
   </footer>
+
+  <button id="scrollTopBtn" title="Retour en haut">⬆</button>
 
   <script>
     let currentSlides = {
@@ -255,6 +309,11 @@
       const offset = -currentSlides[carousel] * 100;
       carouselElement.style.transform = `translateX(${offset}%)`;
     }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
   </script>
 
 </body>
