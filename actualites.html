@@ -33,7 +33,7 @@
     }
 
     header img {
-      width: 150px;
+      width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
@@ -131,6 +131,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       transition: background-color 0.3s ease;
       z-index: 1000;
+      display: none; /* Masqué par défaut */
     }
 
     #btn-remonter:hover {
@@ -280,7 +281,6 @@
       carouselElement.style.transform = `translateX(${offset}%)`;
     }
 
-    // Bouton remonter en haut de page
     const btnRemonter = document.getElementById('btn-remonter');
 
     btnRemonter.addEventListener('click', () => {
@@ -289,6 +289,18 @@
         behavior: 'smooth'
       });
     });
+
+    // Affiche le bouton seulement si on a scrollé plus de 100px
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        btnRemonter.style.display = 'block';
+      } else {
+        btnRemonter.style.display = 'none';
+      }
+    });
+
+    // Masquer le bouton au chargement (utile si on est déjà en haut)
+    btnRemonter.style.display = 'none';
   </script>
 
 </body>
