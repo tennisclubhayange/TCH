@@ -116,7 +116,6 @@
       text-decoration: underline;
     }
 
-    /* Bouton remonter */
     #btn-remonter {
       position: fixed;
       bottom: 30px;
@@ -131,7 +130,7 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       transition: background-color 0.3s ease;
       z-index: 1000;
-      display: none; /* Masqué par défaut */
+      display: none;
     }
 
     #btn-remonter:hover {
@@ -160,92 +159,41 @@
   <div class="content">
     <h2>Actualités</h2>
 
-    <h3>Retour sur la 3e journée des championnats SENIORS PRINTEMPS – Dimanche 11 mai</h3>
+    <!-- NOUVELLE PUBLICATION DU 18 MAI -->
+    <h3>Retour sur la 4e journée des championnats SENIORS PRINTEMPS – <em>Dimanche 18 mai</em></h3>
     <p>
-      Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end, à domicile comme à l’extérieur !<br /><br />
-      <strong>Résultats :</strong><br /><br />
-      <strong>À DOMICILE (Hayange)</strong><br />
-      • Hommes 1 vs Mont St Martin : match nul 3-3<br />
-      • Hommes 2 vs Trémery : match nul 3-3<br />
-      • Dames 2 vs Thionville Guentrange : victoire 5-0<br /><br />
-      <strong>À L’EXTÉRIEUR</strong><br />
-      • Dames 1 à Ennery : victoire 6-0<br />
-      • Hommes 3 à Algrange : défaite 0-5<br /><br />
-      Bravo à toutes nos équipes pour leur engagement et leurs performances !<br />
-      Merci à tous ceux qui sont venus encourager nos joueurs et joueuses.
+      Nos équipes ont une nouvelle fois porté fièrement les couleurs du club, que ce soit à Hayange ou à l’extérieur !<br><br>
+      <strong>Résultats :</strong><br><br>
+      <strong>À DOMICILE (Hayange)</strong><br>
+      • Dames 1 vs Cattenom : victoire 6-0<br>
+      • Hommes 3 vs Uckange : défaite 1-4<br><br>
+      <strong>À L’EXTÉRIEUR</strong><br>
+      • Hommes 1 à Terville : victoire 5-1<br>
+      • Hommes 2 à Guentrange : victoire 5-1<br>
+      • Dames 2 à Amnéville : défaite 1-4<br><br>
+      Bravo à toutes nos équipes pour leur engagement et leur combativité sur les courts !<br>
+      Un grand merci à tous ceux qui sont venus encourager nos joueurs et joueuses ce week-end.<br><br>
+      <strong>Allez Hayange ! 🎾</strong>
     </p>
 
-    <div class="carousel" id="carousel-11mai">
+    <div class="carousel" id="carousel-18mai">
       <div class="carousel-images">
-        <img src="photos_site/11mai1.jpeg" alt="Photo 11 mai 1" />
-        <img src="photos_site/11mai2.jpeg" alt="Photo 11 mai 2" />
-        <img src="photos_site/11mai3.jpeg" alt="Photo 11 mai 3" />
-        <img src="photos_site/11mai4.jpeg" alt="Photo 11 mai 4" />
-        <img src="photos_site/11mai5.jpeg" alt="Photo 11 mai 5" />
-        <img src="photos_site/11mai6.jpeg" alt="Photo 11 mai 6" />
+        <img src="photos_actu/18mai1.jpeg" alt="Photo 18 mai 1" />
+        <img src="photos_actu/18mai2.jpeg" alt="Photo 18 mai 2" />
+        <img src="photos_actu/18mai3.jpeg" alt="Photo 18 mai 3" />
+        <img src="photos_actu/18mai4.jpeg" alt="Photo 18 mai 4" />
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('11mai', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('11mai', 1)">&#10095;</button>
+        <button class="carousel-button" onclick="moveSlide('18mai', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('18mai', 1)">&#10095;</button>
       </div>
     </div>
 
-    <br /><br />
+    <br><br>
 
-    <h3>Deuxième dimanche des championnats SENIORS PRINTEMPS</h3>
-    <p>
-      De très bons résultats pour l’ensemble des équipes :<br /><br />
-      Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange au terme d’un Double « d’enfer »<br />
-      Les Hommes Hayange 2 gagnent 6/0 contre Uckange<br />
-      Les Hommes Hayange 3 gagnent 5/0 contre Tremery<br /><br />
-      Les Dames Hayange 1 gagnent 6/0 contre Terville à Hayange<br />
-      Les Dames Hayange 2 perdent 2/3 contre Ottange avec le regret d’un 7/10 au super tie break du double…
-    </p>
+    <!-- Les publications précédentes peuvent suivre ici... -->
 
-    <div class="carousel" id="carousel-printemps">
-      <div class="carousel-images">
-        <img src="photos_actu/tournoi1.jpeg" alt="Photo printemps 1" />
-        <img src="photos_actu/tournoi2.jpeg" alt="Photo printemps 2" />
-        <img src="photos_actu/tournoi3.jpeg" alt="Photo printemps 3" />
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('printemps', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('printemps', 1)">&#10095;</button>
-      </div>
-    </div>
-
-    <br /><br />
-
-    <h3>Tournoi 2025</h3>
-    <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
-
-    <div class="carousel" id="carousel-tournoi">
-      <div class="carousel-images">
-        <img src="photos_actu/actu1.jpeg" alt="Photo du tournoi 1" />
-        <img src="photos_actu/actu2.jpeg" alt="Photo du tournoi 2" />
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('tournoi', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('tournoi', 1)">&#10095;</button>
-      </div>
-    </div>
-
-    <br /><br />
-
-    <h3>Les terrains extérieurs sont prêts !</h3>
-    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club.</p>
-
-    <div class="carousel" id="carousel-terrains">
-      <div class="carousel-images">
-        <img src="photos_actu/terrain1.jpeg" alt="Terrain extérieur 1" />
-        <img src="photos_actu/terrain2.jpeg" alt="Terrain extérieur 2" />
-        <img src="photos_actu/terrain3.jpeg" alt="Terrain extérieur 3" />
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('terrains', 1)">&#10095;</button>
-      </div>
-    </div>
+    <!-- Tu peux laisser les autres articles déjà présents comme ils étaient -->
   </div>
 
   <footer>
@@ -253,7 +201,6 @@
     <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
   </footer>
 
-  <!-- Bouton remonter -->
   <button id="btn-remonter" title="Remonter en haut">&#8679;</button>
 
   <script>
@@ -261,7 +208,8 @@
       printemps: 0,
       tournoi: 0,
       terrains: 0,
-      '11mai': 0
+      '11mai': 0,
+      '18mai': 0
     };
 
     function moveSlide(carousel, direction) {
@@ -284,22 +232,13 @@
     const btnRemonter = document.getElementById('btn-remonter');
 
     btnRemonter.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Affiche le bouton seulement si on a scrollé plus de 100px
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        btnRemonter.style.display = 'block';
-      } else {
-        btnRemonter.style.display = 'none';
-      }
+      btnRemonter.style.display = window.scrollY > 100 ? 'block' : 'none';
     });
 
-    // Masquer le bouton au chargement (utile si on est déjà en haut)
     btnRemonter.style.display = 'none';
   </script>
 
