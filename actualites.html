@@ -20,6 +20,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
     }
+
     header {
       background-image: url('photos_site/banniere.jpeg');
       background-size: cover;
@@ -30,31 +31,37 @@
       padding: 80px 20px;
       text-align: center;
     }
+
     header img {
       width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
+
     nav {
       background-color: #005599;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       background-color: #003366;
     }
+
     .content {
       padding: 20px;
       max-width: 900px;
       margin: auto;
     }
+
     .carousel {
       position: relative;
       width: 100%;
@@ -62,11 +69,13 @@
       margin: 0 auto;
       overflow: hidden;
     }
+
     .carousel-images {
       display: flex;
       transition: transform 0.5s ease;
       width: 100%;
     }
+
     .carousel-images img {
       width: 100%;
       flex-shrink: 0;
@@ -74,6 +83,7 @@
       object-fit: cover;
       border-radius: 10px;
     }
+
     .carousel-buttons {
       position: absolute;
       top: 50%;
@@ -82,6 +92,7 @@
       justify-content: space-between;
       transform: translateY(-50%);
     }
+
     .carousel-button {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
@@ -89,6 +100,7 @@
       border: none;
       cursor: pointer;
     }
+
     footer {
       background-color: #003366;
       color: white;
@@ -96,12 +108,15 @@
       padding: 10px;
       margin-top: 40px;
     }
+
     .facebook-link {
       margin-top: 10px;
       display: block;
       color: #ffffff;
       text-decoration: underline;
     }
+
+    /* Bouton remonter */
     #btn-remonter {
       position: fixed;
       bottom: 30px;
@@ -116,8 +131,9 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
       transition: background-color 0.3s ease;
       z-index: 1000;
-      display: none;
+      display: none; /* Masqué par défaut */
     }
+
     #btn-remonter:hover {
       background-color: #003366;
     }
@@ -144,8 +160,8 @@
   <div class="content">
     <h2>Actualités</h2>
 
-    <!-- Nouvelle actualité -->
-    <h3>Retour sur la 4e journée des championnats SENIORS PRINTEMPS – Dimanche 18 mai 2025</h3>
+    <!-- NOUVELLE ACTU 4e JOURNÉE -->
+    <h3>Retour sur la 4e journée des championnats SENIORS PRINTEMPS – Dimanche 18 mai</h3>
     <p>
       Nos équipes ont une nouvelle fois porté fièrement les couleurs du club, que ce soit à Hayange ou à l’extérieur !<br /><br />
       <strong>Résultats :</strong><br /><br />
@@ -157,16 +173,16 @@
       • Hommes 2 à Guentrange : victoire 5-1<br />
       • Dames 2 à Amnéville : défaite 1-4<br /><br />
       Bravo à toutes nos équipes pour leur engagement et leur combativité sur les courts !<br />
-      Un grand merci à tous ceux qui sont venus encourager nos joueurs et joueuses ce week-end.<br />
-      <strong>Allez Hayange ! 🎾</strong>
+      Un grand merci à tous ceux qui sont venus encourager nos joueurs et joueuses ce week-end.<br /><br />
+      Allez Hayange ! 🎾
     </p>
 
     <div class="carousel" id="carousel-18mai">
       <div class="carousel-images">
-        <img src="photos_actu/18mai1.jpeg" alt="Photo 18 mai 1" />
-        <img src="photos_actu/18mai2.jpeg" alt="Photo 18 mai 2" />
-        <img src="photos_actu/18mai3.jpeg" alt="Photo 18 mai 3" />
-        <img src="photos_actu/18mai4.jpeg" alt="Photo 18 mai 4" />
+        <img src="photos_site/18mai1.jpeg" alt="Photo 18 mai 1" />
+        <img src="photos_site/18mai2.jpeg" alt="Photo 18 mai 2" />
+        <img src="photos_site/18mai3.jpeg" alt="Photo 18 mai 3" />
+        <img src="photos_site/18mai4.jpeg" alt="Photo 18 mai 4" />
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('18mai', -1)">&#10094;</button>
@@ -176,10 +192,7 @@
 
     <br /><br />
 
-    <!-- Anciennes actualités en dessous, inchangées -->
-    <!-- ... copier ici les sections précédentes comme "11mai", "printemps", etc. -->
-
-    <!-- Exemple : Journée 11 mai -->
+    <!-- ACTU 3e JOURNÉE -->
     <h3>Retour sur la 3e journée des championnats SENIORS PRINTEMPS – Dimanche 11 mai</h3>
     <p>
       Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end, à domicile comme à l’extérieur !<br /><br />
@@ -197,12 +210,12 @@
 
     <div class="carousel" id="carousel-11mai">
       <div class="carousel-images">
-        <img src="photos_site/11mai1.jpeg" />
-        <img src="photos_site/11mai2.jpeg" />
-        <img src="photos_site/11mai3.jpeg" />
-        <img src="photos_site/11mai4.jpeg" />
-        <img src="photos_site/11mai5.jpeg" />
-        <img src="photos_site/11mai6.jpeg" />
+        <img src="photos_site/11mai1.jpeg" alt="Photo 11 mai 1" />
+        <img src="photos_site/11mai2.jpeg" alt="Photo 11 mai 2" />
+        <img src="photos_site/11mai3.jpeg" alt="Photo 11 mai 3" />
+        <img src="photos_site/11mai4.jpeg" alt="Photo 11 mai 4" />
+        <img src="photos_site/11mai5.jpeg" alt="Photo 11 mai 5" />
+        <img src="photos_site/11mai6.jpeg" alt="Photo 11 mai 6" />
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('11mai', -1)">&#10094;</button>
@@ -210,8 +223,65 @@
       </div>
     </div>
 
-    <!-- Ajouter ici les autres actus comme printemps, tournoi, terrains -->
+    <br /><br />
 
+    <!-- ACTU DEUXIÈME DIMANCHE CHAMPIONNATS -->
+    <h3>Deuxième dimanche des championnats SENIORS PRINTEMPS</h3>
+    <p>
+      De très bons résultats pour l’ensemble des équipes :<br /><br />
+      Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange au terme d’un Double « d’enfer »<br />
+      Les Hommes Hayange 2 gagnent 6/0 contre Uckange<br />
+      Les Hommes Hayange 3 gagnent 5/0 contre Tremery<br /><br />
+      Les Dames Hayange 1 gagnent 6/0 contre Terville à Hayange<br />
+      Les Dames Hayange 2 perdent 2/3 contre Ottange avec le regret d’un 7/10 au super tie break du double…
+    </p>
+
+    <div class="carousel" id="carousel-printemps">
+      <div class="carousel-images">
+        <img src="photos_actu/tournoi1.jpeg" alt="Photo printemps 1" />
+        <img src="photos_actu/tournoi2.jpeg" alt="Photo printemps 2" />
+        <img src="photos_actu/tournoi3.jpeg" alt="Photo printemps 3" />
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('printemps', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('printemps', 1)">&#10095;</button>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- TOURNOI 2025 -->
+    <h3>Tournoi 2025</h3>
+    <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
+
+    <div class="carousel" id="carousel-tournoi">
+      <div class="carousel-images">
+        <img src="photos_actu/actu1.jpeg" alt="Photo du tournoi 1" />
+        <img src="photos_actu/actu2.jpeg" alt="Photo du tournoi 2" />
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('tournoi', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('tournoi', 1)">&#10095;</button>
+      </div>
+    </div>
+
+    <br /><br />
+
+    <!-- TERRAINS EXTÉRIEURS -->
+    <h3>Les terrains extérieurs sont prêts !</h3>
+    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club.</p>
+
+    <div class="carousel" id="carousel-terrains">
+      <div class="carousel-images">
+        <img src="photos_actu/terrain1.jpeg" alt="Terrain extérieur 1" />
+        <img src="photos_actu/terrain2.jpeg" alt="Terrain extérieur 2" />
+        <img src="photos_actu/terrain3.jpeg" alt="Terrain extérieur 3" />
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('terrains', 1)">&#10095;</button>
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -219,15 +289,16 @@
     <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
   </footer>
 
+  <!-- Bouton remonter -->
   <button id="btn-remonter" title="Remonter en haut">&#8679;</button>
 
   <script>
     let currentSlides = {
       '18mai': 0,
       '11mai': 0,
-      'printemps': 0,
-      'tournoi': 0,
-      'terrains': 0
+      printemps: 0,
+      tournoi: 0,
+      terrains: 0
     };
 
     function moveSlide(carousel, direction) {
@@ -257,7 +328,11 @@
     });
 
     window.addEventListener('scroll', () => {
-      btnRemonter.style.display = window.scrollY > 100 ? 'block' : 'none';
+      if (window.scrollY > 100) {
+        btnRemonter.style.display = 'block';
+      } else {
+        btnRemonter.style.display = 'none';
+      }
     });
 
     btnRemonter.style.display = 'none';
