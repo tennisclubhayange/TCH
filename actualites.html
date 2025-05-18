@@ -17,8 +17,9 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
+      color: #333;
     }
 
     header {
@@ -36,6 +37,9 @@
       width: 100px;
       height: auto;
       margin-bottom: 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
     }
 
     nav {
@@ -43,13 +47,14 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      font-weight: bold;
     }
 
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
-      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
     nav a:hover {
@@ -59,15 +64,31 @@
     .content {
       padding: 20px;
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .content h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .content h3 {
+      margin-top: 40px;
+      color: #005599;
     }
 
     .carousel {
       position: relative;
       width: 100%;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 20px auto 40px;
       overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: white;
     }
 
     .carousel-images {
@@ -81,7 +102,8 @@
       flex-shrink: 0;
       max-height: 400px;
       object-fit: cover;
-      border-radius: 10px;
+      user-select: none;
+      border-radius: 10px 10px 0 0;
     }
 
     .carousel-buttons {
@@ -91,27 +113,40 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
+      padding: 0 10px;
+      box-sizing: border-box;
+      pointer-events: none;
     }
 
     .carousel-button {
+      pointer-events: all;
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
-      padding: 10px;
+      padding: 10px 14px;
       border: none;
       cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin-top: 40px;
+      padding: 15px 10px;
+      margin-top: 60px;
+      font-size: 14px;
     }
 
     .facebook-link {
       margin-top: 10px;
-      display: block;
+      display: inline-block;
       color: #ffffff;
       text-decoration: underline;
     }
@@ -125,7 +160,7 @@
       color: white;
       border: none;
       padding: 12px 16px;
-      font-size: 16px;
+      font-size: 20px;
       border-radius: 50%;
       cursor: pointer;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -160,8 +195,8 @@
   <div class="content">
     <h2>Actualités</h2>
 
-    <!-- NOUVELLE ACTU 4e JOURNÉE -->
-    <h3>Retour sur la 4e journée des championnats SENIORS PRINTEMPS – Dimanche 18 mai</h3>
+    <!-- Actualité 4e journée 18 mai -->
+    <h3>Retour sur la 4e journée des championnats SENIORS PRINTEMPS – Dimanche 18 mai 2025</h3>
     <p>
       Nos équipes ont une nouvelle fois porté fièrement les couleurs du club, que ce soit à Hayange ou à l’extérieur !<br /><br />
       <strong>Résultats :</strong><br /><br />
@@ -173,16 +208,16 @@
       • Hommes 2 à Guentrange : victoire 5-1<br />
       • Dames 2 à Amnéville : défaite 1-4<br /><br />
       Bravo à toutes nos équipes pour leur engagement et leur combativité sur les courts !<br />
-      Un grand merci à tous ceux qui sont venus encourager nos joueurs et joueuses ce week-end.<br /><br />
-      Allez Hayange ! 🎾
+      Un grand merci à tous ceux qui sont venus encourager nos joueurs et joueuses ce week-end.<br />
+      <strong>Allez Hayange ! 🎾</strong>
     </p>
 
     <div class="carousel" id="carousel-18mai">
       <div class="carousel-images">
-        <img src="photos_site/18mai1.jpeg" alt="Photo 18 mai 1" />
-        <img src="photos_site/18mai2.jpeg" alt="Photo 18 mai 2" />
-        <img src="photos_site/18mai3.jpeg" alt="Photo 18 mai 3" />
-        <img src="photos_site/18mai4.jpeg" alt="Photo 18 mai 4" />
+        <img src="photos_actu/18mai1.jpeg" alt="Photo 18 mai 1" />
+        <img src="photos_actu/18mai2.jpeg" alt="Photo 18 mai 2" />
+        <img src="photos_actu/18mai3.jpeg" alt="Photo 18 mai 3" />
+        <img src="photos_actu/18mai4.jpeg" alt="Photo 18 mai 4" />
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('18mai', -1)">&#10094;</button>
@@ -190,9 +225,7 @@
       </div>
     </div>
 
-    <br /><br />
-
-    <!-- ACTU 3e JOURNÉE -->
+    <!-- Actualité 3e journée 11 mai -->
     <h3>Retour sur la 3e journée des championnats SENIORS PRINTEMPS – Dimanche 11 mai</h3>
     <p>
       Nos équipes ont encore une fois montré leur détermination sur les terrains ce week-end, à domicile comme à l’extérieur !<br /><br />
@@ -223,15 +256,13 @@
       </div>
     </div>
 
-    <br /><br />
-
-    <!-- ACTU DEUXIÈME DIMANCHE CHAMPIONNATS -->
+    <!-- Deuxième dimanche printemps -->
     <h3>Deuxième dimanche des championnats SENIORS PRINTEMPS</h3>
     <p>
       De très bons résultats pour l’ensemble des équipes :<br /><br />
       Les Hommes Hayange 1 gagnent 4/2 contre Grand Verdun à Hayange au terme d’un Double « d’enfer »<br />
       Les Hommes Hayange 2 gagnent 6/0 contre Uckange<br />
-      Les Hommes Hayange 3 gagnent 5/0 contre Tremery<br /><br />
+      Les Hommes Hayange 3 gagnent 5/0 contre Trémery<br /><br />
       Les Dames Hayange 1 gagnent 6/0 contre Terville à Hayange<br />
       Les Dames Hayange 2 perdent 2/3 contre Ottange avec le regret d’un 7/10 au super tie break du double…
     </p>
@@ -248,9 +279,7 @@
       </div>
     </div>
 
-    <br /><br />
-
-    <!-- TOURNOI 2025 -->
+    <!-- Tournoi 2025 -->
     <h3>Tournoi 2025</h3>
     <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
 
@@ -265,77 +294,61 @@
       </div>
     </div>
 
-    <br /><br />
-
-    <!-- TERRAINS EXTÉRIEURS -->
+    <!-- Terrains extérieurs -->
     <h3>Les terrains extérieurs sont prêts !</h3>
-    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club.</p>
-
-    <div class="carousel" id="carousel-terrains">
-      <div class="carousel-images">
-        <img src="photos_actu/terrain1.jpeg" alt="Terrain extérieur 1" />
-        <img src="photos_actu/terrain2.jpeg" alt="Terrain extérieur 2" />
-        <img src="photos_actu/terrain3.jpeg" alt="Terrain extérieur 3" />
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('terrains', 1)">&#10095;</button>
-      </div>
-    </div>
+    <p>
+      Les terrains extérieurs ont été préparés et sont désormais prêts pour la saison estivale. Merci à tous les bénévoles pour leur travail acharné.
+    </p>
   </div>
 
   <footer>
-    &copy; 2025 Tennis Club de Hayange - Tous droits réservés
-    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+    &copy; 2025 Tennis Club de Hayange — Tous droits réservés.<br />
+    <a href="https://www.facebook.com/TCHayange" target="_blank" class="facebook-link">Page Facebook du club</a>
   </footer>
 
-  <!-- Bouton remonter -->
   <button id="btn-remonter" title="Remonter en haut">&#8679;</button>
 
   <script>
-    let currentSlides = {
+    // Gestion carrousels
+    const carousels = {
       '18mai': 0,
       '11mai': 0,
-      printemps: 0,
-      tournoi: 0,
-      terrains: 0
+      'printemps': 0,
+      'tournoi': 0
     };
 
-    function moveSlide(carousel, direction) {
-      const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
-      const images = carouselElement.querySelectorAll('img');
+    function moveSlide(carouselId, direction) {
+      const carousel = document.getElementById('carousel-' + carouselId);
+      if (!carousel) return;
+
+      const imagesContainer = carousel.querySelector('.carousel-images');
+      const images = imagesContainer.querySelectorAll('img');
       const total = images.length;
 
-      currentSlides[carousel] += direction;
+      // Met à jour l'index
+      carousels[carouselId] += direction;
+      if (carousels[carouselId] < 0) carousels[carouselId] = total -1;
+      if (carousels[carouselId] >= total) carousels[carouselId] = 0;
 
-      if (currentSlides[carousel] < 0) {
-        currentSlides[carousel] = total - 1;
-      } else if (currentSlides[carousel] >= total) {
-        currentSlides[carousel] = 0;
-      }
-
-      const offset = -currentSlides[carousel] * 100;
-      carouselElement.style.transform = `translateX(${offset}%)`;
+      // Applique la translation
+      const offset = -carousels[carouselId] * 100;
+      imagesContainer.style.transform = 'translateX(' + offset + '%)';
     }
 
+    // Bouton remonter
     const btnRemonter = document.getElementById('btn-remonter');
 
-    btnRemonter.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        btnRemonter.style.display = 'block';
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnRemonter.style.display = "block";
       } else {
-        btnRemonter.style.display = 'none';
+        btnRemonter.style.display = "none";
       }
-    });
+    };
 
-    btnRemonter.style.display = 'none';
+    btnRemonter.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
   </script>
 
 </body>
