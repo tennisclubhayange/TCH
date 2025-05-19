@@ -281,12 +281,16 @@
 
     <!-- Tournoi 2025 -->
     <h3>Tournoi 2025</h3>
-    <p>Le tournoi annuel du Tennis Club de Hayange a eu lieu avec un grand succès ! Voici quelques photos :</p>
+    <p>
+      Le tournoi annuel du Tennis Club de Hayange s’est déroulé dans une ambiance festive et compétitive.<br />
+      Félicitations à tous les participants et aux gagnants !
+    </p>
 
     <div class="carousel" id="carousel-tournoi">
       <div class="carousel-images">
-        <img src="photos_actu/actu1.jpeg" alt="Photo du tournoi 1" />
-        <img src="photos_actu/actu2.jpeg" alt="Photo du tournoi 2" />
+        <img src="photos_actu/tournoi1.jpeg" alt="Tournoi 1" />
+        <img src="photos_actu/tournoi2.jpeg" alt="Tournoi 2" />
+        <img src="photos_actu/tournoi3.jpeg" alt="Tournoi 3" />
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveSlide('tournoi', -1)">&#10094;</button>
@@ -294,62 +298,82 @@
       </div>
     </div>
 
-    <!-- Terrains extérieurs -->
+    <!-- Dernière actualité : terrains extérieurs -->
     <h3>Les terrains extérieurs sont prêts !</h3>
-    <p>
-      Les terrains extérieurs ont été préparés et sont désormais prêts pour la saison estivale. Merci à tous les bénévoles pour leur travail acharné.
-    </p>
+    <p>Les terrains extérieurs ont été rénovés et sont maintenant prêts à accueillir tous les membres du club.</p>
+
+    <div class="carousel" id="carousel-terrains">
+      <div class="carousel-images">
+        <img src="photos_actu/terrain1.jpeg" alt="Terrain extérieur 1" />
+        <img src="photos_actu/terrain2.jpeg" alt="Terrain extérieur 2" />
+        <img src="photos_actu/terrain3.jpeg" alt="Terrain extérieur 3" />
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('terrains', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('terrains', 1)">&#10095;</button>
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    &copy; 2025 Tennis Club de Hayange — Tous droits réservés.<br />
-    <a href="https://www.facebook.com/TCHayange" target="_blank" class="facebook-link">Page Facebook du club</a>
+    &copy; 2025 Tennis Club de Hayange - Tous droits réservés<br />
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
   </footer>
 
+  <!-- Bouton remonter -->
   <button id="btn-remonter" title="Remonter en haut">&#8679;</button>
 
   <script>
-    // Gestion carrousels
-    const carousels = {
+    // Stockage des index courants pour chaque carrousel
+    let currentSlides = {
       '18mai': 0,
       '11mai': 0,
-      'printemps': 0,
-      'tournoi': 0
+      printemps: 0,
+      tournoi: 0,
+      terrains: 0
     };
 
-    function moveSlide(carouselId, direction) {
-      const carousel = document.getElementById('carousel-' + carouselId);
-      if (!carousel) return;
-
-      const imagesContainer = carousel.querySelector('.carousel-images');
-      const images = imagesContainer.querySelectorAll('img');
+    function moveSlide(carousel, direction) {
+      const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
+      const images = carouselElement.querySelectorAll('img');
       const total = images.length;
 
-      // Met à jour l'index
-      carousels[carouselId] += direction;
-      if (carousels[carouselId] < 0) carousels[carouselId] = total -1;
-      if (carousels[carouselId] >= total) carousels[carouselId] = 0;
+      currentSlides[carousel] += direction;
 
-      // Applique la translation
-      const offset = -carousels[carouselId] * 100;
-      imagesContainer.style.transform = 'translateX(' + offset + '%)';
+      if (currentSlides[carousel] < 0) {
+        currentSlides[carousel] = total - 1;
+      } else if (currentSlides[carousel] >= total) {
+        currentSlides[carousel] = 0;
+      }
+
+      // Calculer la translation pour afficher l'image courante
+      const translateX = -currentSlides[carousel] * 100;
+      carouselElement.style.transform = `translateX(${translateX}%)`;
     }
 
-    // Bouton remonter
+    // Afficher le bouton remonter selon le scroll
     const btnRemonter = document.getElementById('btn-remonter');
 
-    window.onscroll = function() {
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btnRemonter.style.display = "block";
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btnRemonter.style.display = 'block';
       } else {
-        btnRemonter.style.display = "none";
+        btnRemonter.style.display = 'none';
       }
-    };
+    });
 
-    btnRemonter.onclick = function() {
-      window.scrollTo({top: 0, behavior: 'smooth'});
-    };
+    btnRemonter.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Initialiser tous les carrousels à la première image (optionnel)
+    document.addEventListener('DOMContentLoaded', () => {
+      for (const key in currentSlides) {
+        moveSlide(key, 0);
+      }
+    });
   </script>
 
 </body>
-</html>
+</html>y
