@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Horaires - Tennis Club de Hayange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Horaires d'ouverture du Tennis Club de Hayange. Réservez vos courts en ligne et jouez de 8h à 22h, tous les jours.">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LXTHJ4S78"></script>
@@ -17,19 +18,32 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f2f2f2;
+    }
+
+    header {
+      text-align: center;
+      background-color: white;
+      padding: 20px 0;
+    }
+
+    .logo {
+      max-width: 120px;
+      height: auto;
     }
 
     nav {
       background-color: #005599;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       padding: 14px 20px;
-      display: inline-block;
       text-decoration: none;
       font-weight: bold;
     }
@@ -80,10 +94,27 @@
       font-weight: bold;
       border-radius: 5px;
       display: inline-block;
+      transition: transform 0.2s;
     }
 
     .reservation-section a:hover {
       background-color: #003366;
+      transform: scale(1.05);
+    }
+
+    .meteo {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .meteo a {
+      color: #005599;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .meteo a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -93,9 +124,41 @@
       padding: 10px;
       margin-top: 40px;
     }
+
+    /* Responsive table */
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+
+      td::before {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      td:nth-child(1)::before { content: "Jour"; }
+      td:nth-child(2)::before { content: "Horaires"; }
+    }
   </style>
 </head>
 <body>
+
+  <header>
+    <img class="logo" src="photos_site/logo.jpeg" alt="Logo du Tennis Club de Hayange">
+  </header>
 
   <nav>
     <a href="index.html">Accueil</a>
@@ -112,21 +175,26 @@
     <p>Le club est ouvert tous les jours de <strong>08h00 à 22h00</strong>.</p>
 
     <table>
-      <tr>
-        <th>Jour</th>
-        <th>Horaires</th>
-      </tr>
-      <tr><td>Lundi</td><td>08h00 - 22h00</td></tr>
-      <tr><td>Mardi</td><td>08h00 - 22h00</td></tr>
-      <tr><td>Mercredi</td><td>08h00 - 22h00</td></tr>
-      <tr><td>Jeudi</td><td>08h00 - 22h00</td></tr>
-      <tr><td>Vendredi</td><td>08h00 - 22h00</td></tr>
-      <tr><td>Samedi</td><td>08h00 - 22h00</td></tr>
-      <tr><td>Dimanche</td><td>08h00 - 22h00</td></tr>
+      <thead>
+        <tr><th>Jour</th><th>Horaires</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lundi</td><td>08h00 - 22h00</td></tr>
+        <tr><td>Mardi</td><td>08h00 - 22h00</td></tr>
+        <tr><td>Mercredi</td><td>08h00 - 22h00</td></tr>
+        <tr><td>Jeudi</td><td>08h00 - 22h00</td></tr>
+        <tr><td>Vendredi</td><td>08h00 - 22h00</td></tr>
+        <tr><td>Samedi</td><td>08h00 - 22h00</td></tr>
+        <tr><td>Dimanche</td><td>08h00 - 22h00</td></tr>
+      </tbody>
     </table>
 
     <div class="reservation-section">
-      <a href="http://82.127.93.91/tecnnis/FR/index.awp" target="_blank">Réserver un court en ligne</a>
+      <a href="http://82.127.93.91/tecnnis/FR/index.awp" target="_blank">🎾 Réserver un court en ligne</a>
+    </div>
+
+    <div class="meteo">
+      🌦 <a href="https://www.meteofrance.com/previsions-meteo-france/hayange/57700" target="_blank">Voir la météo à Hayange</a>
     </div>
   </div>
 
