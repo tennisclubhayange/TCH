@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Comité - Tennis Club de Hayange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google tag (gtag.js) -->
+  <meta name="description" content="Découvrez les membres du comité du Tennis Club de Hayange : président, trésorier, assesseurs et responsables sportifs.">
+  
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LXTHJ4S78"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,15 +59,42 @@
 
     .content {
       padding: 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
+    h2, h3 {
+      text-align: center;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .comite-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .comite-card {
+      background-color: white;
+      padding: 15px;
       border-radius: 10px;
-      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 200px;
+    }
+
+    .comite-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
     }
 
     footer {
@@ -83,13 +111,35 @@
       color: #ffffff;
       text-decoration: underline;
     }
+
+    a.facebook-link:hover {
+      color: #99ccff;
+    }
+
+    /* Bouton retour en haut */
+    .top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #005599;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .top-btn:hover {
+      background-color: #003366;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club">
-    <h1>Tennis Club de Hayange</h1>
+    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club de Hayange">
+    <h1>Le Comité</h1>
     <p>Sport, passion et convivialité</p>
   </header>
 
@@ -104,40 +154,60 @@
   </nav>
 
   <div class="content">
-    <h2>Le Comité</h2>
-    <p>Voici les membres du comité du Tennis Club de Hayange :</p>
+    <div class="intro">
+      <p>Le comité du Tennis Club de Hayange est composé de bénévoles passionnés qui assurent la gestion, l'organisation et l'animation du club tout au long de l'année.</p>
+    </div>
 
-    <img src="photos_site/marlene.jpeg" alt="Photo de la présidente" style="width: 200px; height: auto;">
-
-    <ul>
-      <li><strong>Présidente :</strong> Marie NOESSER-SCHEER (dite Marlène), née DECKER</li>
-      <li><strong>Vice-Président :</strong> Gautier MENNEL</li>
-      <li><strong>Secrétaire :</strong> Jérémi BOULANGER</li>
-      <li><strong>Secrétaire adjoint :</strong> Cédric MENNEL</li>
-      <li><strong>Trésorière :</strong> Angela IANNELLI</li>
-      <li><strong>Trésorière adjointe :</strong> Pascale JOTZ</li>
-    </ul>
+    <h3>Bureau</h3>
+    <div class="comite-grid">
+      <div class="comite-card">
+        <img src="photos_site/marlene.jpeg" alt="Marie NOESSER-SCHEER, présidente du club">
+        <p><strong>Présidente</strong><br>Marie NOESSER-SCHEER</p>
+      </div>
+      <div class="comite-card">
+        <img src="photos_site/placeholder.jpg" alt="Gautier MENNEL">
+        <p><strong>Vice-Président</strong><br>Gautier MENNEL</p>
+      </div>
+      <div class="comite-card">
+        <img src="photos_site/placeholder.jpg" alt="Jérémi BOULANGER">
+        <p><strong>Secrétaire</strong><br>Jérémi BOULANGER</p>
+      </div>
+      <div class="comite-card">
+        <img src="photos_site/placeholder.jpg" alt="Cédric MENNEL">
+        <p><strong>Secrétaire adjoint</strong><br>Cédric MENNEL</p>
+      </div>
+      <div class="comite-card">
+        <img src="photos_site/placeholder.jpg" alt="Angela IANNELLI">
+        <p><strong>Trésorière</strong><br>Angela IANNELLI</p>
+      </div>
+      <div class="comite-card">
+        <img src="photos_site/placeholder.jpg" alt="Pascale JOTZ">
+        <p><strong>Trésorière adjointe</strong><br>Pascale JOTZ</p>
+      </div>
+    </div>
 
     <h3>Assesseurs</h3>
-    <ul>
-      <li>Pierre-Michel JOSEPH</li>
-      <li>Lucas FRANCOIS</li>
-      <li>Gabriel RIVIDI</li>
-      <li>Damien DIDIOT</li>
-      <li>Claude FARINA</li>
-    </ul>
+    <div class="comite-grid">
+      <div class="comite-card"><p>Pierre-Michel JOSEPH</p></div>
+      <div class="comite-card"><p>Lucas FRANCOIS</p></div>
+      <div class="comite-card"><p>Gabriel RIVIDI</p></div>
+      <div class="comite-card"><p>Damien DIDIOT</p></div>
+      <div class="comite-card"><p>Claude FARINA</p></div>
+    </div>
 
     <h3>Responsables sportifs</h3>
-    <ul>
-      <li>Yannick LEMAIRE</li>
-      <li>David CHENOT</li>
-    </ul>
+    <div class="comite-grid">
+      <div class="comite-card"><p>Yannick LEMAIRE</p></div>
+      <div class="comite-card"><p>David CHENOT</p></div>
+    </div>
   </div>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
-    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank" rel="noopener noreferrer">Suivez-nous sur Facebook</a>
   </footer>
+
+  <a href="#" class="top-btn" title="Retour en haut">↑</a>
 
 </body>
 </html>
