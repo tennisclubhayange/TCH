@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Comité - Tennis Club de Hayange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez les membres du comité du Tennis Club de Hayange : président, trésorier, assesseurs et responsables sportifs.">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LXTHJ4S78"></script>
@@ -59,42 +58,35 @@
 
     .content {
       padding: 20px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    h2, h3 {
-      text-align: center;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 30px;
-      line-height: 1.6;
+    .comite-section {
+      margin-top: 40px;
     }
 
     .comite-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
     }
 
     .comite-card {
       background-color: white;
-      padding: 15px;
+      border: 1px solid #ddd;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
+      padding: 10px;
       width: 200px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .comite-card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
 
     footer {
@@ -111,34 +103,13 @@
       color: #ffffff;
       text-decoration: underline;
     }
-
-    a.facebook-link:hover {
-      color: #99ccff;
-    }
-
-    .top-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #005599;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      font-size: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .top-btn:hover {
-      background-color: #003366;
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club de Hayange">
-    <h1>Le Comité</h1>
+    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club">
+    <h1>Tennis Club de Hayange</h1>
     <p>Sport, passion et convivialité</p>
   </header>
 
@@ -153,81 +124,87 @@
   </nav>
 
   <div class="content">
-    <div class="intro">
-      <p>Le comité du Tennis Club de Hayange est composé de bénévoles passionnés qui assurent la gestion, l'organisation et l'animation du club tout au long de l'année.</p>
-    </div>
+    <h2>Le Comité</h2>
+    <p>Voici les membres du comité du Tennis Club de Hayange :</p>
 
-    <h3>Bureau</h3>
-    <div class="comite-grid">
-      <div class="comite-card">
-        <img src="photos_site/marlene.jpeg" alt="Marie NOESSER-SCHEER">
-        <p><strong>Présidente</strong><br>Marie NOESSER-SCHEER</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/gautier.jpeg" alt="Gautier MENNEL">
-        <p><strong>Vice-Président</strong><br>Gautier MENNEL</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/jeremi.jpeg" alt="Jérémi BOULANGER">
-        <p><strong>Secrétaire</strong><br>Jérémi BOULANGER</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/cedric.jpeg" alt="Cédric MENNEL">
-        <p><strong>Secrétaire adjoint</strong><br>Cédric MENNEL</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/angela.jpeg" alt="Angela IANNELLI">
-        <p><strong>Trésorière</strong><br>Angela IANNELLI</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/pascale.jpeg" alt="Pascale JOTZ">
-        <p><strong>Trésorière adjointe</strong><br>Pascale JOTZ</p>
-      </div>
-    </div>
-
-    <h3>Assesseurs</h3>
-    <div class="comite-grid">
-      <div class="comite-card">
-        <img src="photos_site/joseph.jpeg" alt="Pierre-Michel JOSEPH">
-        <p>Pierre-Michel JOSEPH</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/lucas.jpeg" alt="Lucas FRANCOIS">
-        <p>Lucas FRANCOIS</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/gabriel.jpeg" alt="Gabriel RIVIDI">
-        <p>Gabriel RIVIDI</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/damien.jpeg" alt="Damien DIDIOT">
-        <p>Damien DIDIOT</p>
-      </div>
-      <div class="comite-card">
-        <img src="photos_site/claude.jpeg" alt="Claude FARINA">
-        <p>Claude FARINA</p>
+    <!-- Bureau -->
+    <div class="comite-section">
+      <h3>Bureau</h3>
+      <div class="comite-grid">
+        <div class="comite-card">
+          <img src="photos_site/marlene.jpeg" alt="Marie NOESSER-SCHEER">
+          <p><strong>Présidente</strong><br>Marie NOESSER-SCHEER</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Gautier MENNEL">
+          <p><strong>Vice-Président</strong><br>Gautier MENNEL</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/Jeremi.jpeg" alt="Jérémi BOULANGER">
+          <p><strong>Secrétaire</strong><br>Jérémi BOULANGER</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Cédric MENNEL">
+          <p><strong>Secrétaire adjoint</strong><br>Cédric MENNEL</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Angela IANNELLI">
+          <p><strong>Trésorière</strong><br>Angela IANNELLI</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Pascale JOTZ">
+          <p><strong>Trésorière adjointe</strong><br>Pascale JOTZ</p>
+        </div>
       </div>
     </div>
 
-    <h3>Responsables sportifs</h3>
-    <div class="comite-grid">
-      <div class="comite-card">
-        <img src="photos_site/yannick.jpeg" alt="Yannick LEMAIRE">
-        <p>Yannick LEMAIRE</p>
+    <!-- Assesseurs -->
+    <div class="comite-section">
+      <h3>Assesseurs</h3>
+      <div class="comite-grid">
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Pierre-Michel JOSEPH">
+          <p>Pierre-Michel JOSEPH</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Lucas FRANCOIS">
+          <p>Lucas FRANCOIS</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Gabriel RIVIDI">
+          <p>Gabriel RIVIDI</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Damien DIDIOT">
+          <p>Damien DIDIOT</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/Claude.jpeg" alt="Claude FARINA">
+          <p>Claude FARINA</p>
+        </div>
       </div>
-      <div class="comite-card">
-        <img src="photos_site/david.jpeg" alt="David CHENOT">
-        <p>David CHENOT</p>
+    </div>
+
+    <!-- Responsables sportifs -->
+    <div class="comite-section">
+      <h3>Responsables sportifs</h3>
+      <div class="comite-grid">
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="Yannick LEMAIRE">
+          <p>Yannick LEMAIRE</p>
+        </div>
+        <div class="comite-card">
+          <img src="photos_site/default.jpeg" alt="David CHENOT">
+          <p>David CHENOT</p>
+        </div>
       </div>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
-    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank" rel="noopener noreferrer">Suivez-nous sur Facebook</a>
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
   </footer>
-
-  <a href="#" class="top-btn" title="Retour en haut">↑</a>
 
 </body>
 </html>
