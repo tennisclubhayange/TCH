@@ -6,6 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Horaires d'ouverture du Tennis Club de Hayange. Réservez vos courts en ligne et jouez de 8h à 22h, tous les jours.">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LXTHJ4S78"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9LXTHJ4S78');
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -93,6 +102,18 @@
       transform: scale(1.05);
     }
 
+    .meteo {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .meteo iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border: none;
+    }
+
     footer {
       background-color: #003366;
       color: white;
@@ -127,11 +148,6 @@
 
       td:nth-child(1)::before { content: "Jour"; }
       td:nth-child(2)::before { content: "Horaires"; }
-    }
-
-    .meteo {
-      text-align: center;
-      margin-top: 30px;
     }
   </style>
 </head>
@@ -174,35 +190,15 @@
       <a href="http://82.127.93.91/tecnnis/FR/index.awp" target="_blank">🎾 Réserver un court en ligne</a>
     </div>
 
-    <!-- WIDGET MÉTÉO POUR HAYANGE -->
     <div class="meteo">
-      <a class="weatherwidget-io"
-         href="https://forecast7.com/fr/49d34n6d05/hayange/"
-         data-label_1="HAYANGE"
-         data-label_2="MÉTÉO"
-         data-days="5"
-         data-theme="pure">
-        Météo Hayange
-      </a>
+      <h2>🌦 Météo à Hayange (5 jours)</h2>
+      <iframe src="https://meteofrance.com/widget/prevision/57700" allowtransparency="true"></iframe>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
   </footer>
-
-  <!-- SCRIPT POUR AFFICHER LE WIDGET -->
-  <script>
-    !function(d,s,id){
-      var js,fjs=d.getElementsByTagName(s)[0];
-      if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src='https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document,'script','weatherwidget-io-js');
-  </script>
 
 </body>
 </html>
