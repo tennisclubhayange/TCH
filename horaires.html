@@ -104,14 +104,7 @@
 
     .meteo {
       text-align: center;
-      margin-top: 40px;
-    }
-
-    .meteo iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 350px;
-      border: none;
+      margin-top: 30px;
     }
 
     footer {
@@ -191,14 +184,34 @@
     </div>
 
     <div class="meteo">
-      <h2>🌦 Météo à Hayange (5 jours)</h2>
-      <iframe src="https://meteofrance.com/widget/prevision/57700" allowtransparency="true"></iframe>
+      <!-- WIDGET MÉTÉO POUR HAYANGE -->
+      <a class="weatherwidget-io"
+         href="https://forecast7.com/fr/49d336d06/hayange/"
+         data-label_1="Hayange"
+         data-label_2="Météo"
+         data-theme="original"
+         data-days="5">
+         Hayange Météo
+      </a>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
   </footer>
+
+  <!-- SCRIPT POUR LE WIDGET -->
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
 
 </body>
 </html>
