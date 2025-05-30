@@ -107,16 +107,6 @@
       margin-top: 30px;
     }
 
-    .meteo a {
-      color: #005599;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .meteo a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       background-color: #003366;
       color: white;
@@ -194,7 +184,36 @@
     </div>
 
     <div class="meteo">
-      🌦 <a href="https://www.meteofrance.com/previsions-meteo-france/hayange/57700" target="_blank">Voir la météo à Hayange</a>
+      <a class="weatherwidget-io"
+         href="https://forecast7.com/fr/49d34n6d05/hayange/"
+         data-label_1="HAYANGE"
+         data-label_2="MÉTÉO"
+         data-days="5"
+         data-theme="pure"
+         data-basecolor="#ffffff"
+         data-accent="#005599"
+         data-textcolor="#000000"
+         data-highcolor="#d80000"
+         data-lowcolor="#1c6ef2"
+         data-raincolor="#0077cc"
+         data-snowcolor="#8888ff"
+         data-cloudcolor="#cccccc"
+         data-suncolor="#ffaa00"
+         data-mooncolor="#555555"
+         data-windcolor="#999999">
+        Météo Hayange
+      </a>
+      <script>
+        !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+            js=d.createElement(s);
+            js.id=id;
+            js.src='https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js,fjs);
+          }
+        }(document,'script','weatherwidget-io-js');
+      </script>
     </div>
   </div>
 
@@ -203,4 +222,4 @@
   </footer>
 
 </body>
-</html>
+</html>-
