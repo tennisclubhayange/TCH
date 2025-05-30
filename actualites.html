@@ -195,6 +195,32 @@
   <div class="content">
     <h2>Actualités</h2>
 
+    <!-- Actualité - Tournoi d’Été -->
+<h3>🎾 TOURNOI D’ÉTÉ – TC HAYANGE</h3>
+<p>
+  Bonne ambiance, beaux matchs et soleil au rendez-vous ! 🌞💪<br /><br />
+  Le Tournoi Seniors d’Été a démarré depuis quelques jours et tout se passe à merveille !<br /><br />
+  ✅ De nombreux joueurs déjà en lice<br />
+  ✅ Une super ambiance sur et autour des courts<br />
+  ✅ Et bien sûr… le bar est ouvert 🍻☕ — parfait pour profiter d’un moment convivial en regardant les matchs !<br /><br />
+  📍 Vous pouvez venir nous rejoindre au club pour encourager les joueurs, profiter du cadre et passer un bon moment.<br /><br />
+  ➡️ Le tournoi se poursuit jusqu’au 28 juin, alors n’hésitez pas à venir faire un tour !<br /><br />
+  Merci à tous les bénévoles, joueurs, spectateurs, et partenaires du club pour votre bonne humeur et votre soutien.<br /><br />
+  🎾 À très vite au TC Hayange !
+</p>
+
+<div class="carousel" id="carousel-tournoi-ete">
+  <div class="carousel-images">
+    <img src="photos_actu/tournoi_ete1.jpeg" alt="Photo tournoi été 1" />
+    <img src="photos_actu/tournoi_ete2.jpeg" alt="Photo tournoi été 2" />
+    <img src="photos_actu/tournoi_ete3.jpeg" alt="Photo tournoi été 3" />
+  </div>
+  <div class="carousel-buttons">
+    <button class="carousel-button" onclick="moveSlide('tournoi-ete', -1)">&#10094;</button>
+    <button class="carousel-button" onclick="moveSlide('tournoi-ete', 1)">&#10095;</button>
+  </div>
+</div>
+
     <!-- Actualité du 25 mai 2025 - Clap de fin championnat Seniors Printemps -->
 <h3>🎾 Clap de fin pour le championnat SENIORS PRINTEMPS – Dimanche 25 mai !</h3>
 <p>
@@ -341,13 +367,14 @@
   <script>
     // Stockage des index courants pour chaque carrousel
     let currentSlides = {
-      '18mai': 0,
-      '11mai': 0,
-      printemps: 0,
-      tournoi: 0,
-      terrains: 0,
-      '24mai': 0
-    };
+  '18mai': 0,
+  '11mai': 0,
+  printemps: 0,
+  tournoi: 0,
+  terrains: 0,
+  '24mai': 0,
+  'tournoi-ete': 0 // 👈 ajoute ceci
+}
 
     function moveSlide(carousel, direction) {
       const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
