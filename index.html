@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Tennis Club de Hayange</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site officiel du Tennis Club de Hayange - horaires, actualités, réservation et espace Ten’Up pour les adhérents." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tennis Club de Hayange" />
+  <meta property="og:description" content="Découvrez notre club de tennis, nos horaires, actualités et comment réserver un court." />
+  <meta property="og:image" content="https://tennisclubhayange.github.io/TCH/photos_site/logo.jpeg" />
+  <meta property="og:url" content="https://tennisclubhayange.github.io/TCH/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="photos_site/favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LXTHJ4S78"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-9LXTHJ4S78');
   </script>
@@ -21,8 +32,8 @@
       background-color: #f9f9f9;
     }
 
-    /* Bannière avec image de fond */
     header {
+      position: relative;
       background-image: url('photos_site/banniere.jpeg');
       background-size: cover;
       background-position: center;
@@ -31,12 +42,28 @@
       color: white;
       padding: 120px 20px;
       text-align: center;
-      position: relative;
     }
 
-    header h1, header p {
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      font-size: 2.5em;
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header h1,
+    header p,
+    header img {
+      position: relative;
+      z-index: 2;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 150px;
+      height: auto;
     }
 
     header h1 {
@@ -46,11 +73,13 @@
       text-transform: uppercase;
       padding: 10px;
       border: 2px solid white;
+      display: inline-block;
     }
 
     header p {
       font-size: 1.5em;
       margin-top: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     nav {
@@ -71,10 +100,14 @@
       background-color: #003366;
     }
 
-    .content {
+    main.content {
       padding: 20px;
       max-width: 900px;
       margin: auto;
+    }
+
+    main.content h2 {
+      color: #005599;
     }
 
     footer {
@@ -93,10 +126,11 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <img src="photos_site/logo.jpeg" alt="Logo du Tennis Club">
+    <img src="photos_site/logo.jpeg" alt="Logo officiel du Tennis Club de Hayange" />
     <h1>Tennis Club de Hayange</h1>
     <p>Sport, passion et convivialité</p>
   </header>
@@ -111,7 +145,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="content">
+  <main class="content">
     <h2>Bienvenue sur notre site !</h2>
     <p>Le Tennis Club de Hayange vous accueille toute l’année pour pratiquer le tennis en loisir ou en compétition. Rejoignez-nous et partagez notre passion du tennis !</p>
 
@@ -132,13 +166,12 @@
     </ul>
     <p>💻 Ou connectez-vous directement sur : <a href="https://tenup.fft.fr" target="_blank" rel="noopener noreferrer">https://tenup.fft.fr</a></p>
     <p>N’attendez plus pour rejoindre la communauté Ten’Up et profiter pleinement de votre passion !</p>
-    <p>🎾 À bientôt sur les courts !<br>L’équipe du Tennis Club de Hayange</p>
-
-  </div>
+    <p>🎾 À bientôt sur les courts !<br />L’équipe du Tennis Club de Hayange</p>
+  </main>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
-    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank" rel="noopener noreferrer">Suivez-nous sur Facebook</a>
   </footer>
 
 </body>
