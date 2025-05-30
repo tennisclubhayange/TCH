@@ -6,7 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Horaires d'ouverture du Tennis Club de Hayange. Réservez vos courts en ligne et jouez de 8h à 22h, tous les jours.">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- SEO Open Graph & Twitter -->
+  <meta property="og:title" content="Horaires - Tennis Club de Hayange">
+  <meta property="og:description" content="Retrouvez les horaires d'ouverture du club et réservez votre court facilement en ligne.">
+  <meta property="og:image" content="https://tennisclubhayange.github.io/TCH/photos_site/logo.jpeg">
+  <meta property="og:url" content="https://tennisclubhayange.github.io/TCH/horaires.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LXTHJ4S78"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -52,7 +59,7 @@
       background-color: #003366;
     }
 
-    .content {
+    main.content {
       max-width: 900px;
       margin: auto;
       padding: 20px;
@@ -115,7 +122,6 @@
       margin-top: 40px;
     }
 
-    /* Responsive table */
     @media (max-width: 600px) {
       table, thead, tbody, th, td, tr {
         display: block;
@@ -144,10 +150,11 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <img class="logo" src="photos_site/logo.jpeg" alt="Logo du Tennis Club de Hayange">
+    <img class="logo" src="photos_site/logo.jpeg" alt="Logo du Tennis Club de Hayange - TCH">
   </header>
 
   <nav>
@@ -160,7 +167,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="content">
+  <main class="content">
     <h1>Horaires du Tennis Club</h1>
     <p>Le club est ouvert tous les jours de <strong>08h00 à 22h00</strong>.</p>
 
@@ -180,11 +187,12 @@
     </table>
 
     <div class="reservation-section">
-      <a href="http://82.127.93.91/tecnnis/FR/index.awp" target="_blank">🎾 Réserver un court en ligne</a>
+      <a href="http://82.127.93.91/tecnnis/FR/index.awp" target="_blank" rel="noopener noreferrer">
+        🎾 Réserver un court en ligne
+      </a>
     </div>
 
     <div class="meteo">
-      <!-- WIDGET MÉTÉO POUR HAYANGE -->
       <a class="weatherwidget-io"
          href="https://forecast7.com/fr/49d336d06/hayange/"
          data-label_1="Hayange"
@@ -194,13 +202,13 @@
          Hayange Météo
       </a>
     </div>
-  </div>
+  </main>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
   </footer>
 
-  <!-- SCRIPT POUR LE WIDGET -->
+  <!-- Script pour le widget météo -->
   <script>
     !function(d,s,id){
       var js,fjs=d.getElementsByTagName(s)[0];
