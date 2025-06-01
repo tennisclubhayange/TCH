@@ -65,20 +65,44 @@
     ul {
       list-style-type: none;
       padding-left: 0;
+      font-size: 1.2em;
+      line-height: 1.8;
     }
 
     ul li {
-      margin-bottom: 10px;
-      font-size: 1.1em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    ul li::before {
+      content: '📞';
+      margin-right: 10px;
+      font-size: 1.3em;
+    }
+
+    ul li:nth-child(1)::before {
+      content: '📧';  /* Email */
+    }
+
+    ul li:nth-child(2)::before {
+      content: '📞';  /* Téléphone */
+    }
+
+    ul li:nth-child(3)::before {
+      content: '📘';  /* Facebook */
     }
 
     a {
       color: #005599;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #003366;
     }
 
     footer {
