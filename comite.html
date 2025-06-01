@@ -53,6 +53,13 @@
       margin: auto;
     }
 
+    h3 {
+      margin-top: 40px;
+      color: #003366;
+      border-left: 5px solid #005599;
+      padding-left: 10px;
+    }
+
     .comite-grid {
       display: flex;
       flex-wrap: wrap;
@@ -67,6 +74,11 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
       padding: 10px;
+      transition: transform 0.3s;
+    }
+
+    .comite-card:hover {
+      transform: scale(1.03);
     }
 
     .comite-card img {
@@ -113,40 +125,41 @@
     <h2>Le Comité</h2>
     <p>Voici les membres du comité du Tennis Club de Hayange :</p>
 
+    <h3>👥 Bureau</h3>
     <div class="comite-grid">
-
-      <!-- Bureau -->
       <div class="comite-card">
         <img src="photos_site/marlene.jpeg" alt="Marie NOESSER-SCHEER">
-        <p><strong>Présidente</strong><br>Marie NOESSER-SCHEER</p>
+        <p><strong>👩‍💼 Présidente</strong><br>Marie NOESSER-SCHEER</p>
       </div>
 
       <div class="comite-card">
         <img src="photos_site/Gauthier.jpeg" alt="Gautier MENNEL">
-        <p><strong>Vice-Président</strong><br>Gautier MENNEL</p>
+        <p><strong>👨‍💼 Vice-Président</strong><br>Gautier MENNEL</p>
       </div>
 
       <div class="comite-card">
         <img src="photos_site/Jeremi.jpeg" alt="Jérémi BOULANGER">
-        <p><strong>Secrétaire</strong><br>Jérémi BOULANGER</p>
+        <p><strong>📝 Secrétaire</strong><br>Jérémi BOULANGER</p>
       </div>
 
       <div class="comite-card">
         <img src="photos_site/default.jpeg" alt="Cédric MENNEL">
-        <p><strong>Secrétaire adjoint</strong><br>Cédric MENNEL</p>
+        <p><strong>📝 Secrétaire adjoint</strong><br>Cédric MENNEL</p>
       </div>
 
       <div class="comite-card">
         <img src="photos_site/default.jpeg" alt="Angela IANNELLI">
-        <p><strong>Trésorière</strong><br>Angela IANNELLI</p>
+        <p><strong>💰 Trésorière</strong><br>Angela IANNELLI</p>
       </div>
 
       <div class="comite-card">
         <img src="photos_site/default.jpeg" alt="Pascale JOTZ">
-        <p><strong>Trésorière adjointe</strong><br>Pascale JOTZ</p>
+        <p><strong>💰 Trésorière adjointe</strong><br>Pascale JOTZ</p>
       </div>
+    </div>
 
-      <!-- Assesseurs -->
+    <h3>👤 Assesseurs</h3>
+    <div class="comite-grid">
       <div class="comite-card">
         <img src="photos_site/default.jpeg" alt="Pierre-Michel JOSEPH">
         <p>Pierre-Michel JOSEPH</p>
@@ -171,8 +184,10 @@
         <img src="photos_site/Claude.jpeg" alt="Claude FARINA">
         <p>Claude FARINA</p>
       </div>
+    </div>
 
-      <!-- Responsables sportifs -->
+    <h3>🎾 Responsables sportifs</h3>
+    <div class="comite-grid">
       <div class="comite-card">
         <img src="photos_site/default.jpeg" alt="Yannick LEMAIRE">
         <p>Yannick LEMAIRE<br><em>Responsable sportif</em></p>
@@ -182,7 +197,6 @@
         <img src="photos_site/default.jpeg" alt="David CHENOT">
         <p>David CHENOT<br><em>Responsable sportif</em></p>
       </div>
-
     </div>
   </div>
 
