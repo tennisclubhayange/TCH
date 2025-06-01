@@ -65,44 +65,26 @@
     ul {
       list-style-type: none;
       padding-left: 0;
-      font-size: 1.2em;
-      line-height: 1.8;
     }
 
     ul li {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-    }
-
-    ul li::before {
-      content: '📞';
-      margin-right: 10px;
-      font-size: 1.3em;
-    }
-
-    ul li:nth-child(1)::before {
-      content: '📧';  /* Email */
-    }
-
-    ul li:nth-child(2)::before {
-      content: '📞';  /* Téléphone */
-    }
-
-    ul li:nth-child(3)::before {
-      content: '📘';  /* Facebook */
+      margin-bottom: 10px;
+      font-size: 1.1em;
     }
 
     a {
       color: #005599;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
     }
 
     a:hover {
       text-decoration: underline;
-      color: #003366;
+    }
+
+    .facebook-icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     footer {
@@ -115,9 +97,15 @@
 
     .facebook-link {
       margin-top: 10px;
-      display: block;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       color: #ffffff;
       text-decoration: underline;
+    }
+
+    .facebook-link svg {
+      vertical-align: middle;
     }
   </style>
 </head>
@@ -145,13 +133,26 @@
     <ul>
       <li><strong>Email :</strong> <a href="mailto:tennisclubhayange@orange.fr">tennisclubhayange@orange.fr</a></li>
       <li><strong>Téléphone fixe :</strong> <a href="tel:+33382581201">03 82 58 12 01</a></li>
-      <li><strong>Facebook :</strong> <a href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Tennis Club de Hayange</a></li>
+      <li>
+        <strong>Facebook :</strong>
+        <a class="facebook-icon-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
+            <path d="M22.675 0h-21.35C.597 0 0 .6 0 1.337v21.326C0 23.4.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.403 24 24 23.4 24 22.663V1.337C24 .6 23.403 0 22.675 0z"/>
+          </svg>
+          Tennis Club de Hayange
+        </a>
+      </li>
     </ul>
   </div>
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés
-    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">Suivez-nous sur Facebook</a>
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+        <path d="M22.675 0h-21.35C.597 0 0 .6 0 1.337v21.326C0 23.4.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.403 24 24 23.4 24 22.663V1.337C24 .6 23.403 0 22.675 0z"/>
+      </svg>
+      Suivez-nous sur Facebook
+    </a>
   </footer>
 
 </body>
