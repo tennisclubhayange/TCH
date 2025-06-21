@@ -195,6 +195,46 @@
   <div class="content">
     <h2>Actualités</h2>
 
+        <!-- Actualité Matches Rouges & Oranges - 18 juin 2025 -->
+    <h3>🎾 MATCHES ROUGES & ORANGES – MERCREDI 18 JUIN 2025</h3>
+    <p>
+      Belle réussite pour l’après-midi MATCHES “ROUGES & ORANGES” organisée le mercredi 18 juin au TC Hayange !<br /><br />
+      👧🧒 Merci à tous les enfants pour leur enthousiasme et leur bel esprit sportif !<br />
+      👏 Félicitations aux vainqueurs, et bravo à tous les jeunes participants qui ont été récompensés<br />
+      🌞 Une belle ambiance, un goûter convivial, et un grand merci aux éducateurs, mamans et bénévoles pour leur implication.<br /><br />
+      🙌 Merci à tous pour cette belle journée de tennis et de partage !
+    </p>
+
+    <div class="carousel" id="carousel-18juin">
+      <div class="carousel-images">
+        <img src="photos_actu/18juin1.jpeg" alt="Photo 18 juin 1" />
+        <img src="photos_actu/18juin2.jpeg" alt="Photo 18 juin 2" />
+        <img src="photos_actu/18juin3.jpeg" alt="Photo 18 juin 3" />
+        <img src="photos_actu/18juin4.jpeg" alt="Photo 18 juin 4" />
+        <img src="photos_actu/18juin5.jpeg" alt="Photo 18 juin 5" />
+        <img src="photos_actu/18juin6.jpeg" alt="Photo 18 juin 6" />
+        <img src="photos_actu/18juin7.jpeg" alt="Photo 18 juin 7" />
+        <img src="photos_actu/18juin8.jpeg" alt="Photo 18 juin 8" />
+        <img src="photos_actu/18juin9.jpeg" alt="Photo 18 juin 9" />
+        <img src="photos_actu/18juin10.jpeg" alt="Photo 18 juin 10" />
+        <img src="photos_actu/18juin11.jpeg" alt="Photo 18 juin 11" />
+        <img src="photos_actu/18juin12.jpeg" alt="Photo 18 juin 12" />
+        <img src="photos_actu/18juin13.jpeg" alt="Photo 18 juin 13" />
+        <img src="photos_actu/18juin14.jpeg" alt="Photo 18 juin 14" />
+        <img src="photos_actu/18juin15.jpeg" alt="Photo 18 juin 15" />
+        <img src="photos_actu/18juin16.jpeg" alt="Photo 18 juin 16" />
+        <img src="photos_actu/18juin17.jpeg" alt="Photo 18 juin 17" />
+        <img src="photos_actu/18juin18.jpeg" alt="Photo 18 juin 18" />
+        <img src="photos_actu/18juin19.jpeg" alt="Photo 18 juin 19" />
+        <img src="photos_actu/18juin20.jpeg" alt="Photo 18 juin 20" />
+        <img src="photos_actu/18juin21.jpeg" alt="Photo 18 juin 21" />
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide('18juin', -1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('18juin', 1)">&#10095;</button>
+      </div>
+    </div>
+    
     <!-- Actualité Tournoi Été - 28 mai 2025 -->
 <h3>🎾 TOURNOI D’ÉTÉ – TC HAYANGE – Mercredi 28 mai 2025</h3>
 <p>
@@ -373,11 +413,12 @@
   <script>
     // Stockage des index courants pour chaque carrousel
     let currentSlides = {
+  '18juin': 0,
   '18mai': 0,
   '11mai': 0,
-  printemps: 0,
-  tournoi: 0,
-  terrains: 0,
+  'printemps': 0,
+  'tournoi': 0,
+  'terrains': 0,
   '24mai': 0,
   'tournoi-ete': 0 // 👈 ajoute ceci
 }
