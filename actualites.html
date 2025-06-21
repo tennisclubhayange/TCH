@@ -203,10 +203,21 @@
   Votre navigateur ne supporte pas la lecture de cette vidéo.
 </video>
 
+<button id="btnAvancer1">Papy</button>
+
 <video id="video2" controls width="320" height="240">
   <source src="21juin2.mov" type="video/quicktime" />
   Votre navigateur ne supporte pas la lecture de cette vidéo.
 </video>
+
+<script>
+  const video1 = document.getElementById('video1');
+  const btnAvancer1 = document.getElementById('btnAvancer1');
+
+  btnAvancer1.addEventListener('click', () => {
+    video1.currentTime += 10;
+  });
+</script>
 
         <!-- Actualité Matches Rouges & Oranges - 18 juin 2025 -->
     <h3>🎾 MATCHES ROUGES & ORANGES – MERCREDI 18 JUIN 2025</h3>
