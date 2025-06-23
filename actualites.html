@@ -196,6 +196,7 @@
     <h2>Actualités</h2>
 
     <h2>Victoire en Finale – 22 juin 2025</h2>
+
 <p>🏆 Victoire en Finale ! 🏆<br>
 Ce dimanche 22 juin, Karine et Elsa ont remporté avec brio la finale du Challenge José Souto en double Dames 4e série ! 🎾🔥</p>
 
@@ -204,17 +205,31 @@ Ce dimanche 22 juin, Karine et Elsa ont remporté avec brio la finale du Challen
 <p>Le Tennis Club de Hayange est fier de cette belle victoire qui reflète l’engagement et l’esprit d’équipe de ses joueuses ! 💙🤍<br>
 Un grand bravo à Karine et Elsa pour leur performance ! 🥇🎉</p>
 
-<!-- 📸 Galerie photos -->
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0;">
-  <img src="photos_actu/22juin1.jpeg" alt="Photo 1" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="photos_actu/22juin2.jpeg" alt="Photo 2" style="max-width: 300px; width: 100%; height: auto;">
-  <img src="photos_actu/22juin3.jpeg" alt="Photo 3" style="max-width: 300px; width: 100%; height: auto;">
-  <!-- Tu peux ajouter d'autres photos ici -->
+<!-- 🎞️ Carrousel photo -->
+<div style="max-width: 600px; margin: 20px auto; position: relative;">
+  <img id="carrouselPhoto" src="photos_actu/22juin1.jpeg" alt="Photo victoire" style="width: 100%; display: block; border: 1px solid #ccc; border-radius: 8px;">
+  <button onclick="changerPhoto(-1)" style="position: absolute; top: 45%; left: 10px;">⬅️</button>
+  <button onclick="changerPhoto(1)" style="position: absolute; top: 45%; right: 10px;">➡️</button>
 </div>
 
-<!-- 📹 Vidéo balle de match -->
-<div style="text-align: center; margin-bottom: 40px;">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/vQT38cFXp5w" 
+<script>
+  const photos = [
+    "photos_actu/22juin1.jpeg",
+    "photos_actu/22juin2.jpeg",
+    "photos_actu/22juin3.jpeg"
+    // Tu peux ajouter d'autres photos ici
+  ];
+  let index = 0;
+
+  function changerPhoto(direction) {
+    index = (index + direction + photos.length) % photos.length;
+    document.getElementById("carrouselPhoto").src = photos[index];
+  }
+</script>
+
+<!-- 🎥 Vidéo balle de match -->
+<div style="text-align: center; margin: 40px 0;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vQT38cFXp5w"
     title="Balle de match Karine & Elsa" frameborder="0" allowfullscreen></iframe>
 </div>
 
