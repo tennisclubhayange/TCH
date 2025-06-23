@@ -198,31 +198,53 @@
     <h2>Actualité – 21 juin 2025</h2>
 <p>🎾 Entraînement des adultes et des tout-petits sous un beau soleil au Club de Tennis de Hayange ! ☀️</p>
 
-<video id="video1" controls width="100%" style="max-width: 600px; display: block; margin: 20px auto;">
-  <source src="photos_actu/21juin1.mp4" type="video/mp4" />
-  Votre navigateur ne supporte pas la lecture de cette vidéo.
-</video>
-<button id="btnAvancer1" style="display: block; margin: 0 auto 40px;">⏩ Avancer de 10s</button>
+<!-- Conteneur vidéo 1 -->
+<div style="max-width: 600px; margin: 20px auto; text-align: center;">
+  <div id="player1"></div>
+  <button id="btnAvancer1" style="margin-top: 10px;">⏩ Avancer de 10s</button>
+</div>
 
-<video id="video2" controls width="100%" style="max-width: 600px; display: block; margin: 20px auto;">
-  <source src="photos_actu/21juin2.mp4" type="video/mp4" />
-  Votre navigateur ne supporte pas la lecture de cette vidéo.
-</video>
-<button id="btnAvancer2" style="display: block; margin: 0 auto 40px;">⏩ Avancer de 10s</button>
+<!-- Conteneur vidéo 2 -->
+<div style="max-width: 600px; margin: 20px auto; text-align: center;">
+  <div id="player2"></div>
+  <button id="btnAvancer2" style="margin-top: 10px;">⏩ Avancer de 10s</button>
+</div>
+
+<!-- Chargement de l'API YouTube -->
+<script src="https://www.youtube.com/iframe_api"></script>
 
 <script>
-  const video1 = document.getElementById('video1');
-  const btnAvancer1 = document.getElementById('btnAvancer1');
+  let player1, player2;
 
-  btnAvancer1.addEventListener('click', () => {
-    video1.currentTime += 10;
+  // Fonction appelée par l'API YouTube quand elle est prête
+  function onYouTubeIframeAPIReady() {
+    player1 = new YT.Player('player1', {
+      height: '315',
+      width: '560',
+      videoId: 'erxLjoZqqtM',  // ID de la première vidéo
+      playerVars: { 'rel': 0, 'modestbranding': 1 }
+    });
+
+    player2 = new YT.Player('player2', {
+      height: '315',
+      width: '560',
+      videoId: 'Vly3J-rFu70',  // ID de la deuxième vidéo
+      playerVars: { 'rel': 0, 'modestbranding': 1 }
+    });
+  }
+
+  document.getElementById('btnAvancer1').addEventListener('click', () => {
+    if (player1 && player1.getCurrentTime) {
+      let currentTime = player1.getCurrentTime();
+      player1.seekTo(currentTime + 10, true);
+    }
   });
 
-  const video2 = document.getElementById('video2');
-  const btnAvancer2 = document.getElementById('btnAvancer2');
-
-  btnAvancer2.addEventListener('click', () => {
-    video2.currentTime += 10;
+  document.getElementById('btnAvancer2').addEventListener('click', () => {
+    if (player2 && player2.getCurrentTime) {
+      let currentTime = player2.getCurrentTime();
+      player2.seekTo(currentTime + 10, true);
+    }
   });
 </script>
 
