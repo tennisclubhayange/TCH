@@ -195,54 +195,95 @@
   <div class="content">
     <h2>Actualités</h2>
 
-    <h2>Actualité – 22 juin 2025</h2>
+<h2>Actualité – 22 juin 2025</h2>
 <p>🏆 Victoire en Finale ! 🏆<br>
 Ce dimanche 22 juin, Karine et Elsa ont remporté avec brio la finale du Challenge José Souto en double Dames 4e série ! 🎾🔥</p>
 <p>Après un magnifique parcours, elles ont fait preuve de combativité, de cohésion et de sang-froid pour s’imposer en finale 👏💪</p>
 <p>Le Tennis Club de Hayange est fier de cette belle victoire qui reflète l’engagement et l’esprit d’équipe de ses joueuses ! 💙🤍<br>
 Un grand bravo à Karine et Elsa pour leur performance ! 🥇🎉</p>
 
-<!-- Photos -->
-<img src="photos_actu/22juin1.jpeg" alt="Photo 1 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin2.jpeg" alt="Photo 2 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin3.jpeg" alt="Photo 3 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin4.jpeg" alt="Photo 4 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin5.jpeg" alt="Photo 5 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin6.jpeg" alt="Photo 6 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin7.jpeg" alt="Photo 7 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
-<img src="photos_actu/22juin8.jpeg" alt="Photo 8 - Victoire" style="display:block; margin: 20px auto; max-width: 600px; width: 100%;" />
+<!-- Carrousel photos -->
+<div class="carousel" id="carousel-victoire">
+  <div class="carousel-images">
+    <img src="photos_actu/22juin1.jpeg" alt="Photo 1 - Victoire" />
+    <img src="photos_actu/22juin2.jpeg" alt="Photo 2 - Victoire" />
+    <img src="photos_actu/22juin3.jpeg" alt="Photo 3 - Victoire" />
+    <img src="photos_actu/22juin4.jpeg" alt="Photo 4 - Victoire" />
+    <img src="photos_actu/22juin5.jpeg" alt="Photo 5 - Victoire" />
+    <img src="photos_actu/22juin6.jpeg" alt="Photo 6 - Victoire" />
+    <img src="photos_actu/22juin7.jpeg" alt="Photo 7 - Victoire" />
+    <img src="photos_actu/22juin8.jpeg" alt="Photo 8 - Victoire" />
+  </div>
+  <div class="carousel-buttons">
+    <button class="carousel-button" onclick="moveSlide('victoire', -1)">&#10094;</button>
+    <button class="carousel-button" onclick="moveSlide('victoire', 1)">&#10095;</button>
+  </div>
+</div>
 
 <!-- Vidéo YouTube -->
 <div style="max-width: 600px; margin: 40px auto; text-align:center;">
-  <iframe id="videoMatch" width="100%" height="340" src="https://www.youtube.com/embed/vQT38cFXp5w?enablejsapi=1" 
+  <iframe width="100%" height="340" src="https://www.youtube.com/embed/vQT38cFXp5w" 
     title="Balle de match Karine et Elsa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <button id="btnAvancerMatch" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">⏩ Avancer de 10s</button>
 </div>
 
-<script>
-  const iframe = document.getElementById('videoMatch');
-  const btnAvancer = document.getElementById('btnAvancerMatch');
-
-  // YouTube API Player
-  let player;
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('videoMatch');
+<style>
+  .carousel {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
   }
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+    user-select: none;
+  }
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .carousel-button {
+    background-color: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 12px;
+    user-select: none;
+  }
+  .carousel-button:hover {
+    background-color: rgba(0,0,0,0.7);
+  }
+</style>
 
-  btnAvancer.addEventListener('click', () => {
-    if(player && player.getCurrentTime) {
-      let current = player.getCurrentTime();
-      player.seekTo(current + 10, true);
+<script>
+  // Initialisation de l'index pour ce carrousel
+  if (!window.currentSlides) window.currentSlides = {};
+  window.currentSlides['victoire'] = 0;
+
+  function moveSlide(carousel, direction) {
+    const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
+    const images = carouselElement.querySelectorAll('img');
+    const total = images.length;
+
+    window.currentSlides[carousel] += direction;
+
+    if (window.currentSlides[carousel] < 0) {
+      window.currentSlides[carousel] = total - 1;
+    } else if (window.currentSlides[carousel] >= total) {
+      window.currentSlides[carousel] = 0;
     }
-  });
 
-  // Load YouTube API script
-  if (!window.YT) {
-    let tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-  } else {
-    onYouTubeIframeAPIReady();
+    const translateX = -window.currentSlides[carousel] * 100;
+    carouselElement.style.transform = `translateX(${translateX}%)`;
   }
 </script>
 
