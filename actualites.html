@@ -198,17 +198,17 @@
     <h2>Actualité – 21 juin 2025</h2>
 <p>🎾 Entraînement des adultes et des tout-petits sous un beau soleil au Club de Tennis de Hayange ! ☀️</p>
 
-<video id="video1" controls width="320" height="240">
-  <source src="21juin1.mov" type="video/quicktime" />
+<video id="video1" controls width="100%" style="max-width: 600px; display: block; margin: 20px auto;">
+  <source src="videos/21juin1.mp4" type="video/mp4" />
   Votre navigateur ne supporte pas la lecture de cette vidéo.
 </video>
+<button id="btnAvancer1" style="display: block; margin: 0 auto 40px;">⏩ Avancer de 10s</button>
 
-<button id="btnAvancer1">Papy</button>
-
-<video id="video2" controls width="320" height="240">
-  <source src="21juin2.mov" type="video/quicktime" />
+<video id="video2" controls width="100%" style="max-width: 600px; display: block; margin: 20px auto;">
+  <source src="videos/21juin2.mp4" type="video/mp4" />
   Votre navigateur ne supporte pas la lecture de cette vidéo.
 </video>
+<button id="btnAvancer2" style="display: block; margin: 0 auto 40px;">⏩ Avancer de 10s</button>
 
 <script>
   const video1 = document.getElementById('video1');
@@ -216,6 +216,13 @@
 
   btnAvancer1.addEventListener('click', () => {
     video1.currentTime += 10;
+  });
+
+  const video2 = document.getElementById('video2');
+  const btnAvancer2 = document.getElementById('btnAvancer2');
+
+  btnAvancer2.addEventListener('click', () => {
+    video2.currentTime += 10;
   });
 </script>
 
