@@ -111,7 +111,7 @@
       color: #005599;
     }
 
-    /* Section partenaire ajouté */
+    /* Section partenaire */
     .partenaire {
       max-width: 900px;
       margin: 40px auto;
@@ -129,14 +129,22 @@
       font-weight: 700;
     }
 
-    .partenaire img {
+    .partenaires-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .partenaires-logos img {
       max-height: 80px;
-      margin-bottom: 10px;
       transition: transform 0.3s ease;
       cursor: pointer;
     }
 
-    .partenaire img:hover {
+    .partenaires-logos img:hover {
       transform: scale(1.1);
     }
 
@@ -215,13 +223,18 @@
     <p>🎾 À bientôt sur les courts !<br />L’équipe du Tennis Club de Hayange</p>
   </main>
 
-  <!-- Section partenaire -->
+  <!-- Section partenaires -->
   <section class="partenaire">
     <h2>Nos partenaires</h2>
-    <a href="https://www.caisse-epargne.fr/" target="_blank" rel="noopener noreferrer" title="Caisse d'Épargne">
-      <img src="photos_site/logo_caisse_epargne.png" alt="Logo Caisse d'Épargne" />
-    </a>
-    <p>Nous remercions la Caisse d'Épargne pour son soutien au Tennis Club de Hayange.</p>
+    <div class="partenaires-logos">
+      <a href="https://www.caisse-epargne.fr/" target="_blank" rel="noopener noreferrer" title="Caisse d'Épargne">
+        <img src="photos_site/logo_caisse_epargne.png" alt="Logo Caisse d'Épargne" />
+      </a>
+      <a href="https://www.tennispro.fr/" target="_blank" rel="noopener noreferrer" title="Tennis Pro">
+        <img src="photos_site/tennispro.jpeg" alt="Logo Tennis Pro" />
+      </a>
+    </div>
+    <p>Merci à nos partenaires pour leur précieux soutien au Tennis Club de Hayange.</p>
   </section>
 
   <footer>
