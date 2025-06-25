@@ -2,55 +2,54 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Championnat - TC Hayange</title>
+  <title>Championnat - Tennis Club de Hayange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #f9f9f9;
     }
-
     header {
-      background-color: #003366;
+      background-image: url('photos_site/banniere.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: white;
-      padding: 20px;
+      padding: 80px 20px;
       text-align: center;
     }
-
+    header img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
     nav {
       background-color: #005599;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
     }
-
     nav a {
       color: white;
       padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
     }
-
     nav a:hover {
       background-color: #003366;
     }
-
     .content {
-      padding: 30px;
       max-width: 1000px;
       margin: auto;
+      padding: 20px;
     }
-
     iframe {
       width: 100%;
-      height: 600px;
+      height: 700px;
       border: none;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
     }
-
     footer {
       background-color: #003366;
       color: white;
@@ -58,13 +57,25 @@
       padding: 10px;
       margin-top: 40px;
     }
+    .facebook-link {
+      margin-top: 10px;
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .facebook-link svg {
+      vertical-align: middle;
+      margin-right: 6px;
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="photos_site/logo.jpeg" alt="Logo du club" />
     <h1>Championnat</h1>
-    <p>Compositions d'équipes et calendrier des matchs</p>
+    <p>Résultats, compositions et calendrier des équipes</p>
   </header>
 
   <nav>
@@ -79,14 +90,20 @@
   </nav>
 
   <div class="content">
-    <h2>Feuille Championnat (Google Sheets)</h2>
+    <h2>Feuille de championnat</h2>
+    <p>Suivez l’évolution des équipes, les compositions, et les dates de match :</p>
 
-    <!-- Iframe avec la version publiée de la feuille -->
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQGhjQ-NLzZZyQ1N4Wy-iXkE7LIF8ApQrLJRYEqAw3MQIL3p5zw7_JqAw5mckDPkfdhx8jPK44sU60T/pubhtml?widget=true&amp;headers=false"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTHx74FviBO42x6z4UfMxX2T0fHqwr4idh9qcBOl0sRxB4LlNj5Orr14Ogb9FvpMxDTVi-vIxNYUxAv/pubhtml?widget=true&amp;headers=false"></iframe>
   </div>
 
   <footer>
-    &copy; 2025 Tennis Club de Hayange
+    &copy; 2025 Tennis Club de Hayange<br />
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" viewBox="0 0 24 24">
+        <path d="M22.675 0h-21.35C.597 0 0 .6 0 1.337v21.326C0 23.4.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.59l-.467 3.622h-3.123V24h6.116C23.403 24 24 23.4 24 22.663V1.337C24 .6 23.403 0 22.675 0z"/>
+      </svg>
+      Suivez-nous sur Facebook
+    </a>
   </footer>
 
 </body>
