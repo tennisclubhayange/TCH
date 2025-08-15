@@ -113,6 +113,15 @@
       font-weight: 500;
     }
 
+    .photo-cedric {
+      display: block;
+      margin: 0 auto 15px auto; /* centrer et espace en dessous */
+      max-width: 250px; /* largeur maximale */
+      width: 100%; /* s'adapte aux petits écrans */
+      border-radius: 10px; /* coins arrondis */
+      border: 3px solid #856404; /* bordure */
+    }
+
     main.content {
       padding: 20px;
       max-width: 900px;
@@ -188,7 +197,7 @@
 <body>
 
   <header>
-    <img src="photos_site/Cedric.jpeg" alt="Photo de Cédric" />
+    <img src="photos_site/logo.jpeg" alt="Logo officiel du Tennis Club de Hayange" />
     <h1>Tennis Club de Hayange</h1>
     <p>Sport, passion et convivialité</p>
   </header>
@@ -204,9 +213,10 @@
     <a href="championnat.html">Championnat</a>
   </nav>
 
-  <!-- 📅 Prochains événements -->
+  <!-- 📅 Prochains événements avec photo hommage -->
   <div class="infos-urgentes">
-    <h2 style="margin-top:0;">📅 Prochains événements</h2>
+    <img src="photos_site/Cedric.jpeg" alt="Photo de Cédric" class="photo-cedric" />
+    <h2 style="margin-top:10px;">📅 Prochains événements</h2>
     <ul style="list-style:none; padding-left:0; font-size: 1.05em;">
       <li>🚧 <strong>11–24 août</strong> : Travaux terrains 6 & 7 et rénovations terrains 1, 2, 3 et 4 – Réservations bloquées</li>
       <li>🎾 <strong>31 août</strong> : Doubles Pour Tous – Mail à venir</li>
