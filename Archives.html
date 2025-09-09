@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Archives - Tennis Club de Hayange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-image: url('photos_site/banniere.jpeg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 100px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+    }
+
+    nav {
+      background-color: #005599;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #003366;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .content h2, .content h3 {
+      color: #005599;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease;
+      width: 100%;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+      max-height: 400px;
+      object-fit: contain;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="photos_site/logo.jpeg" alt="Logo Tennis Club" />
+  <h1>Archives des actualités</h1>
+  <p>Tennis Club de Hayange</p>
+</header>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="horaires.html">Horaires</a>
+  <a href="actualites.html">Actualités</a>
+  <a href="ecole.html">École & Entraînements</a>
+  <a href="tarifs.html">Tarifs</a>
+  <a href="comite.html">Comité</a>
+  <a href="contact.html">Contact</a>
+  <a href="championnat.html">Championnat</a>
+</nav>
+
+<div class="content">
+  <h2>Archives des Actualités</h2>
+  <p>Retrouvez ici toutes les actualités passées du club.</p>
+
+  <!-- Clap de fin championnat - 25 mai -->
+  <h3>🎾 Clap de fin – 25 mai 2025</h3>
+  <p>Dernière journée du championnat Seniors Printemps avec de très beaux résultats ! 👏</p>
+  <div class="carousel" id="carousel-25mai">
+    <div class="carousel-images">
+      <img src="photos_actu/24mai1.jpeg" alt="Photo 25 mai 1" />
+      <img src="photos_actu/24mai2.jpeg" alt="Photo 25 mai 2" />
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide('25mai', -1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveSlide('25mai', 1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- 4e journée - 18 mai -->
+  <h3>Retour sur la 4e journée – 18 mai 2025</h3>
+  <p>Nos équipes ont une nouvelle fois porté fièrement les couleurs du club ! 💪</p>
+  <div class="carousel" id="carousel-18mai">
+    <div class="carousel-images">
+      <img src="photos_actu/18mai1.jpeg" alt="Photo 18 mai 1" />
+      <img src="photos_actu/IMG_7304.jpeg" alt="Photo 18 mai 2" />
+      <img src="photos_actu/18mai3.jpeg" alt="Photo 18 mai 3" />
+      <img src="photos_actu/18mai4.jpeg" alt="Photo 18 mai 4" />
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide('18mai', -1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveSlide('18mai', 1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- 3e journée - 11 mai -->
+  <h3>Retour sur la 3e journée – 11 mai 2025</h3>
+  <p>Encore un beau week-end pour nos équipes, à domicile comme à l’extérieur !</p>
+  <div class="carousel" id="carousel-11mai">
+    <div class="carousel-images">
+      <img src="photos_site/11mai1.jpeg" alt="Photo 11 mai 1" />
+      <img src="photos_site/11mai2.jpeg" alt="Photo 11 mai 2" />
+      <img src="photos_site/11mai3.jpeg" alt="Photo 11 mai 3" />
+      <img src="photos_site/11mai4.jpeg" alt="Photo 11 mai 4" />
+      <img src="photos_site/11mai5.jpeg" alt="Photo 11 mai 5" />
+      <img src="photos_site/11mai6.jpeg" alt="Photo 11 mai 6" />
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide('11mai', -1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveSlide('11mai', 1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- 2e dimanche printemps -->
+  <h3>Deuxième dimanche des championnats – Printemps 2025</h3>
+  <p>De très bons résultats pour l’ensemble des équipes 👏</p>
+  <div class="carousel" id="carousel-printemps">
+    <div class="carousel-images">
+      <img src="photos_actu/tournoi1.jpeg" alt="Photo printemps 1" />
+      <img src="photos_actu/tournoi2.jpeg" alt="Photo printemps 2" />
+      <img src="photos_actu/tournoi3.jpeg" alt="Photo printemps 3" />
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide('printemps', -1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveSlide('printemps', 1)">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Tennis Club de Hayange - Tous droits réservés
+</footer>
+
+<script>
+  let currentSlides = {
+    '25mai': 0,
+    '18mai': 0,
+    '11mai': 0,
+    'printemps': 0
+  };
+
+  function moveSlide(carousel, direction) {
+    const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
+    const images = carouselElement.querySelectorAll('img');
+    const total = images.length;
+
+    currentSlides[carousel] += direction;
+    if (currentSlides[carousel] < 0) currentSlides[carousel] = total - 1;
+    if (currentSlides[carousel] >= total) currentSlides[carousel] = 0;
+
+    const translateX = -currentSlides[carousel] * 100;
+    carouselElement.style.transform = `translateX(${translateX}%)`;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    for (const key in currentSlides) {
+      moveSlide(key, 0);
+    }
+  });
+</script>
+
+</body>
+</html>
