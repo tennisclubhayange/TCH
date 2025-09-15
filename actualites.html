@@ -179,6 +179,13 @@
       display: block;
       margin: 10px auto 30px;
     }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      header { padding: 40px 12px; }
+      .carousel { max-width: 100%; }
+      .carousel-images img { max-height: 260px; }
+    }
   </style>
 </head>
 <body>
@@ -203,27 +210,62 @@
   <div class="content">
     <h2>Actualités</h2>
 
-    <!-- ===== 22 juin 2025 ===== -->
-    <h2>Actualité – 22 juin 2025</h2>
-    <p>🏆 Victoire en Finale ! 🏆<br>
-    Ce dimanche 22 juin, Karine et Elsa ont remporté avec brio la finale du Challenge José Souto en double Dames 4e série ! 🎾🔥</p>
-    <p>Après un magnifique parcours, elles ont fait preuve de combativité, de cohésion et de sang-froid pour s’imposer en finale 👏💪</p>
-    <p>Le Tennis Club de Hayange est fier de cette belle victoire qui reflète l’engagement et l’esprit d’équipe de ses joueuses ! 💙🤍<br>
-    Un grand bravo à Karine et Elsa pour leur performance ! 🥇🎉</p>
+    <!-- ===== Septembre 2025 (ordre décroissant : plus récent en haut) ===== -->
+    <h2>Actualités – Septembre 2025</h2>
 
-    <!-- Carrousel photos -->
+    <!-- 14 septembre -->
+    <h3>🎾 Dimanche 14 septembre – Championnats Seniors 🎾</h3>
+    <ul>
+      <li>👨‍🦱 <b>Hommes +35</b> : défaite 4/1 face à Villerupt</li>
+      <li>👩 <b>Dames +45</b> : victoire 5/0 contre Cattenom 👏💪</li>
+      <li>👩 <b>Dames +35</b> : défaite 5/0 contre Metz ASPTT</li>
+    </ul>
+    <p>
+      Bravo à toutes nos équipes pour leur engagement et leur esprit de compétition 💙🤍💪<br>
+      Chaque rencontre est une expérience qui fait progresser 💯
+    </p>
+
+    <!-- 11 septembre -->
+    <h3>📅 Jeudi 11 septembre – Bravo les +65 ! 🎾</h3>
+    <p>
+      Nouvelle belle performance de notre équipe <b>Seniors H65</b> : victoire <b>5/0</b> contre Jarny 👏👏<br><br>
+      💪🔥 Un grand bravo aux joueurs pour ce résultat sans appel et leur bel esprit d’équipe !
+    </p>
+
+    <!-- 7 septembre -->
+    <h3>✨ Dimanche 7 septembre – Championnats LOR Seniors+ ✨</h3>
+    <p>
+      🎾 Ce week-end, nos équipes étaient engagées sur les courts :<br><br>
+      👉 <b>Dames +45</b> : en déplacement à Hettange-Grande, elles ramènent une magnifique victoire <b>5-0</b> 👏💪<br>
+      👉 <b>Hommes +35</b> : à domicile, nos joueurs se sont battus avec courage malgré plusieurs blessures et s’inclinent <b>1-4</b>.<br><br>
+      💙🤍 Bravo à toutes et tous pour votre engagement et votre esprit d’équipe qui font la fierté du Tennis Club de Hayange 💪🎾
+    </p>
+
+    <!-- ===== Juin 2025 (ordre décroissant interne si nécessaire) ===== -->
+    <h2>Actualités – Juin 2025</h2>
+
+    <!-- 22 juin -->
+    <h3>🏆 Dimanche 22 juin – Victoire en Finale ! 🏆</h3>
+    <p>
+      Ce dimanche 22 juin, Karine et Elsa ont remporté avec brio la finale du Challenge José Souto en double Dames 4e série ! 🎾🔥<br><br>
+      Après un magnifique parcours, elles ont fait preuve de combativité, de cohésion et de sang-froid pour s’imposer en finale 👏💪<br><br>
+      Le Tennis Club de Hayange est fier de cette belle victoire qui reflète l’engagement et l’esprit d’équipe de ses joueuses ! 💙🤍<br>
+      Un grand bravo à Karine et Elsa pour leur performance ! 🥇🎉
+    </p>
+
+    <!-- Carrousel photos 22 juin -->
     <div class="carousel" id="carousel-victoire">
       <div class="carousel-images">
         <img src="photos_actu/22juin2.jpeg" alt="Victoire - photo 2" />
         <img src="photos_actu/22juin5.jpeg" alt="Victoire - photo 5" />
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('victoire', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('victoire', 1)">&#10095;</button>
+        <button class="carousel-button" onclick="moveSlide('victoire', -1)" aria-label="Précédent">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('victoire', 1)" aria-label="Suivant">&#10095;</button>
       </div>
     </div>
 
-    <!-- Vidéo YouTube -->
+    <!-- Vidéo YouTube 22 juin -->
     <div style="max-width: 600px; margin: 40px auto; text-align:center;">
       <iframe width="100%" height="340"
               src="https://www.youtube.com/embed/vQT38cFXp5w"
@@ -233,11 +275,11 @@
               allowfullscreen></iframe>
     </div>
 
-    <!-- ===== Samedi 21 juin 2025 (2 matches) ===== -->
-    <h2>Actualité – Samedi 21 juin 2025</h2>
-    <p>🎾 Deux matchs passionnants du tournoi se sont déroulés sous un beau soleil au Club de Tennis de Hayange ! ☀️</p>
+    <!-- 21 juin - Matches -->
+    <h3>🎾 Samedi 21 juin – Matches du tournoi 🎾</h3>
+    <p>Deux matchs passionnants du tournoi se sont déroulés sous un beau soleil au Club de Tennis de Hayange ☀️</p>
 
-    <!-- 1er match -->
+    <!-- 1er match (iframe contrôlable) -->
     <div style="max-width: 600px; margin: 20px auto;">
       <iframe id="ytVideo1" width="100%" height="315"
               src="https://www.youtube.com/embed/mn3zChuVZWM?enablejsapi=1"
@@ -247,7 +289,7 @@
       <button id="btnAvancerYT1" class="yt-advance">⏩ Avancer de 10s</button>
     </div>
 
-    <!-- 2ème match -->
+    <!-- 2ème match (iframe contrôlable) -->
     <div style="max-width: 600px; margin: 20px auto;">
       <iframe id="ytVideo2" width="100%" height="315"
               src="https://www.youtube.com/embed/b-db-WEJyqM?enablejsapi=1"
@@ -257,29 +299,29 @@
       <button id="btnAvancerYT2" class="yt-advance">⏩ Avancer de 10s</button>
     </div>
 
-    <!-- ===== 21 juin 2025 (entraînements) ===== -->
-    <h2>Actualité – 21 juin 2025</h2>
-    <p>🎾 Entraînement des adultes et des tout-petits sous un beau soleil au Club de Tennis de Hayange ! ☀️</p>
+    <!-- 21 juin - Entraînements -->
+    <h3>🎾 Samedi 21 juin – Entraînements 🎾</h3>
+    <p>Entraînement des adultes et des tout-petits sous un beau soleil au Club de Tennis de Hayange ☀️</p>
 
-    <!-- Conteneur vidéo 1 -->
+    <!-- Conteneur vidéo 1 (créé par l'API) -->
     <div style="max-width: 600px; margin: 20px auto; text-align: center;">
       <div id="player1"></div>
       <button id="btnAvancer1" class="yt-advance">⏩ Avancer de 10s</button>
     </div>
 
-    <!-- Conteneur vidéo 2 -->
+    <!-- Conteneur vidéo 2 (créé par l'API) -->
     <div style="max-width: 600px; margin: 20px auto; text-align: center;">
       <div id="player2"></div>
       <button id="btnAvancer2" class="yt-advance">⏩ Avancer de 10s</button>
     </div>
 
-    <!-- ===== 18 juin 2025 ===== -->
-    <h3>🎾 MATCHES ROUGES & ORANGES – MERCREDI 18 JUIN 2025</h3>
+    <!-- 18 juin -->
+    <h3>🎾 Mercredi 18 juin – MATCHES ROUGES & ORANGES 🎾</h3>
     <p>
-      Belle réussite pour l’après-midi MATCHES “ROUGES & ORANGES” organisée le mercredi 18 juin au TC Hayange !<br /><br />
-      👧🧒 Merci à tous les enfants pour leur enthousiasme et leur bel esprit sportif !<br />
-      👏 Félicitations aux vainqueurs, et bravo à tous les jeunes participants qui ont été récompensés<br />
-      🌞 Une belle ambiance, un goûter convivial, et un grand merci aux éducateurs, mamans et bénévoles pour leur implication.<br /><br />
+      Belle réussite pour l’après-midi MATCHES “ROUGES & ORANGES” organisée au TC Hayange !<br><br>
+      👧🧒 Merci à tous les enfants pour leur enthousiasme et leur bel esprit sportif !<br>
+      👏 Félicitations aux vainqueurs, et bravo à tous les jeunes participants récompensés.<br>
+      🌞 Une belle ambiance, un goûter convivial, et un grand merci aux éducateurs, mamans et bénévoles pour leur implication.<br><br>
       🙌 Merci à tous pour cette belle journée de tennis et de partage !
     </p>
 
@@ -308,22 +350,25 @@
         <img src="photos_actu/18juin21.jpeg" alt="Photo 18 juin 21" />
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('18juin', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('18juin', 1)">&#10095;</button>
+        <button class="carousel-button" onclick="moveSlide('18juin', -1)" aria-label="Précédent">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('18juin', 1)" aria-label="Suivant">&#10095;</button>
       </div>
     </div>
 
-    <!-- ===== 28 mai 2025 ===== -->
-    <h3>🎾 TOURNOI D’ÉTÉ – TC HAYANGE – Mercredi 28 mai 2025</h3>
+    <!-- ===== Mai 2025 ===== -->
+    <h2>Actualités – Mai 2025</h2>
+
+    <!-- 28 mai -->
+    <h3>🎾 Mercredi 28 mai – Tournoi d’Été 🎾</h3>
     <p>
-      Bonne ambiance, beaux matchs et soleil au rendez-vous ! 🌞💪<br /><br />
-      Le Tournoi Seniors d’Été a démarré depuis quelques jours et tout se passe à merveille !<br /><br />
-      ✅ De nombreux joueurs déjà en lice<br />
-      ✅ Une super ambiance sur et autour des courts<br />
-      ✅ Et bien sûr… le bar est ouvert 🍻☕ — parfait pour profiter d’un moment convivial en regardant les matchs !<br /><br />
-      📍 Vous pouvez venir nous rejoindre au club pour encourager les joueurs, profiter du cadre et passer un bon moment.<br /><br />
-      ➡️ Le tournoi se poursuit jusqu’au 28 juin, alors n’hésitez pas à venir faire un tour !<br /><br />
-      Merci à tous les bénévoles, joueurs, spectateurs, et partenaires du club pour votre bonne humeur et votre soutien.<br /><br />
+      Bonne ambiance, beaux matchs et soleil au rendez-vous ! 🌞💪<br><br>
+      Le Tournoi Seniors d’Été a démarré depuis quelques jours et tout se passe à merveille !<br><br>
+      ✅ De nombreux joueurs déjà en lice<br>
+      ✅ Une super ambiance sur et autour des courts<br>
+      ✅ Et bien sûr… le bar est ouvert 🍻☕ — parfait pour profiter d’un moment convivial en regardant les matchs !<br><br>
+      📍 Venez nous rejoindre au club pour encourager les joueurs et profiter du cadre.<br><br>
+      ➡️ Le tournoi se poursuit jusqu’au 28 juin, alors n’hésitez pas à venir faire un tour !<br><br>
+      Merci à tous les bénévoles, joueurs, spectateurs, et partenaires du club pour votre bonne humeur et votre soutien.<br><br>
       🎾 À très vite au TC Hayange !
     </p>
 
@@ -335,8 +380,8 @@
         <img src="photos_actu/tournoi_ete4.jpeg" alt="Photo tournoi été 4" />
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide('tournoi-ete', -1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide('tournoi-ete', 1)">&#10095;</button>
+        <button class="carousel-button" onclick="moveSlide('tournoi-ete', -1)" aria-label="Précédent">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide('tournoi-ete', 1)" aria-label="Suivant">&#10095;</button>
       </div>
     </div>
 
@@ -344,60 +389,49 @@
 
   <footer>
     &copy; 2025 Tennis Club de Hayange - Tous droits réservés<br>
-    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank">
+    <a class="facebook-link" href="https://www.facebook.com/p/Tennis-club-de-Hayange-100064194245615/" target="_blank" rel="noopener">
       Suivez-nous sur Facebook
     </a>
   </footer>
 
   <!-- Bouton remonter -->
-  <button id="btn-remonter" title="Remonter en haut">&#8679;</button>
+  <button id="btn-remonter" title="Remonter en haut" aria-label="Remonter en haut">&#8679;</button>
 
   <!-- ===== Scripts spécifiques ===== -->
+  <!-- YouTube IFrame API (chargée une seule fois) -->
+  <script src="https://www.youtube.com/iframe_api"></script>
 
-  <!-- Script 1 : Avancer de 10s sur les 2 iframes (21 juin – deux matchs) -->
   <script>
-    function avancerDe10Secondes(playerId) {
-      const player = new YT.Player(playerId, {
-        events: {
-          onReady: (event) => {
-            const currentTime = event.target.getCurrentTime();
-            event.target.seekTo(currentTime + 10, true);
-          }
-        }
-      });
-    }
+    // Lecteurs YouTube (globaux)
+    let matchPlayer1 = null;   // pour ytVideo1
+    let matchPlayer2 = null;   // pour ytVideo2
+    let trainingPlayer1 = null; // pour player1
+    let trainingPlayer2 = null; // pour player2
 
-    // Boutons pour avancer de 10 secondes
-    document.addEventListener('DOMContentLoaded', () => {
-      const b1 = document.getElementById("btnAvancerYT1");
-      const b2 = document.getElementById("btnAvancerYT2");
-      if (b1) b1.addEventListener("click", () => avancerDe10Secondes("ytVideo1"));
-      if (b2) b2.addEventListener("click", () => avancerDe10Secondes("ytVideo2"));
-    });
-
-    // Chargement de l'API IFrame de YouTube (pour cette section)
-    (function(){
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    })();
-  </script>
-
-  <!-- Script 2 : Deux lecteurs YouTube contrôlés (21 juin – entraînements) -->
-  <script>
-    let player1, player2;
-
-    // Cette fonction est appelée par l'API YouTube
+    // Appelée par l'API YouTube quand elle est prête
     function onYouTubeIframeAPIReady() {
-      player1 = new YT.Player('player1', {
+      // Pour les iframes existants (ytVideo1 & ytVideo2)
+      try {
+        matchPlayer1 = new YT.Player('ytVideo1', {
+          events: { /* onReady not required */ }
+        });
+      } catch (e) { matchPlayer1 = null; }
+
+      try {
+        matchPlayer2 = new YT.Player('ytVideo2', {
+          events: { }
+        });
+      } catch (e) { matchPlayer2 = null; }
+
+      // Pour les conteneurs div (player1 & player2) — on fournit l'ID de vidéo souhaitée
+      trainingPlayer1 = new YT.Player('player1', {
         height: '315',
         width: '560',
         videoId: 'erxLjoZqqtM',
         playerVars: { 'rel': 0, 'modestbranding': 1 }
       });
 
-      player2 = new YT.Player('player2', {
+      trainingPlayer2 = new YT.Player('player2', {
         height: '315',
         width: '560',
         videoId: 'Vly3J-rFu70',
@@ -405,35 +439,21 @@
       });
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const a1 = document.getElementById('btnAvancer1');
-      const a2 = document.getElementById('btnAvancer2');
+    // Handler pour avancer de 10s (sûr : vérifie que le player est prêt)
+    function advancePlayerBy10(player) {
+      if (!player || typeof player.getCurrentTime !== 'function') return;
+      try {
+        const now = player.getCurrentTime();
+        player.seekTo(now + 10, true);
+      } catch (e) {
+        console.warn('Impossible d’avancer la vidéo :', e);
+      }
+    }
 
-      if (a1) a1.addEventListener('click', () => {
-        if (player1 && player1.getCurrentTime) {
-          let t = player1.getCurrentTime();
-          player1.seekTo(t + 10, true);
-        }
-      });
-
-      if (a2) a2.addEventListener('click', () => {
-        if (player2 && player2.getCurrentTime) {
-          let t = player2.getCurrentTime();
-          player2.seekTo(t + 10, true);
-        }
-      });
-    });
-  </script>
-
-  <!-- Charger l'API YouTube (pour la 2e section) -->
-  <script src="https://www.youtube.com/iframe_api"></script>
-
-  <!-- Script 3 : Carrousels + bouton remonter -->
-  <script>
-    // Index courants pour chaque carrousel présent
+    // Carrousels
     let currentSlides = {
       'victoire': 0,
-      '18juin' : 0,
+      '18juin': 0,
       'tournoi-ete': 0
     };
 
@@ -442,9 +462,9 @@
       if (!carouselElement) return;
       const images = carouselElement.querySelectorAll('img');
       const total = images.length;
+      if (total === 0) return;
 
       currentSlides[carousel] = (currentSlides[carousel] || 0) + direction;
-
       if (currentSlides[carousel] < 0) currentSlides[carousel] = total - 1;
       if (currentSlides[carousel] >= total) currentSlides[carousel] = 0;
 
@@ -455,17 +475,59 @@
     // Afficher le bouton remonter selon le scroll
     const btnRemonter = document.getElementById('btn-remonter');
     window.addEventListener('scroll', () => {
+      if (!btnRemonter) return;
       btnRemonter.style.display = (window.scrollY > 300) ? 'block' : 'none';
     });
-    btnRemonter.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if (btnRemonter) {
+      btnRemonter.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
-    // Initialisation carrousels
+    // Initialisation des écouteurs après DOM chargé
     document.addEventListener('DOMContentLoaded', () => {
+      // Initialiser carrousels (position 0)
       for (const key in currentSlides) moveSlide(key, 0);
+
+      // Boutons pour avancer 10s — matches (iframe)
+      const b1 = document.getElementById("btnAvancerYT1");
+      const b2 = document.getElementById("btnAvancerYT2");
+      if (b1) b1.addEventListener("click", () => {
+        // Si matchPlayer1 n'est pas encore prêt, essayer d'envoyer postMessage as fallback
+        if (matchPlayer1 && typeof matchPlayer1.getCurrentTime === 'function') {
+          advancePlayerBy10(matchPlayer1);
+        } else {
+          // fallback : postMessage to iframe (works only if enablejsapi=1)
+          const iframe = document.getElementById('ytVideo1');
+          if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[10,true]}', '*');
+          }
+        }
+      });
+      if (b2) b2.addEventListener("click", () => {
+        if (matchPlayer2 && typeof matchPlayer2.getCurrentTime === 'function') {
+          advancePlayerBy10(matchPlayer2);
+        } else {
+          const iframe = document.getElementById('ytVideo2');
+          if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[10,true]}', '*');
+          }
+        }
+      });
+
+      // Boutons pour avancer 10s — entraînements (player1/player2)
+      const a1 = document.getElementById('btnAvancer1');
+      const a2 = document.getElementById('btnAvancer2');
+      if (a1) a1.addEventListener('click', () => {
+        if (trainingPlayer1) advancePlayerBy10(trainingPlayer1);
+      });
+      if (a2) a2.addEventListener('click', () => {
+        if (trainingPlayer2) advancePlayerBy10(trainingPlayer2);
+      });
     });
   </script>
+
+  <!-- Script carrousels supplémentaire (si besoin d'autoplay ou autre extension, à ajouter ici) -->
 
 </body>
 </html>
