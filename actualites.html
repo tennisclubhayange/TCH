@@ -209,8 +209,44 @@
 
   <div class="content">
     <h2>Actualités</h2>
+<h2>Actualités – Mars 2026</h2>
 
-<h2>Actualités – Janvier 2026</h2>
+<h3>🏆 Dimanche 15 mars 2026 – Coupe des Dames : Victoire d’Hayange 🏆</h3>
+
+<p>
+  🏆🎾 <strong>Coupe des Dames</strong> 🎾🏆
+</p>
+
+<p>
+  Ce dimanche 15 mars, notre équipe féminine du <b>TC Hayange</b> s’est imposée 
+  <b>2–1</b> face à l’équipe d’Uckange 👏💪
+</p>
+
+<p>
+  Une rencontre disputée avec beaucoup d’intensité et un très bel esprit d’équipe
+  sur les courts. Nos joueuses ont su faire preuve de combativité pour aller chercher
+  cette belle victoire.
+</p>
+
+<p>
+  👏 <strong>Félicitations à toutes les joueuses</strong> pour leur engagement et leur performance !<br>
+  Continuez comme ça, nous sommes fiers de vous 💙🎾
+</p>
+
+<div class="carousel" id="carousel-dames15mars2026">
+  <div class="carousel-images">
+    <img src="photos_actu/15mars_dames.jpeg.jpeg" alt="Victoire des dames - 15 mars 2026">
+  </div>
+
+  <div class="carousel-buttons">
+    <button class="carousel-button" onclick="moveSlide('dames15mars2026', -1)">&#10094;</button>
+    <button class="carousel-button" onclick="moveSlide('dames15mars2026', 1)">&#10095;</button>
+  </div>
+</div>
+
+<hr style="margin: 40px 0; border: 1px solid #ccc;">
+
+    <h2>Actualités – Janvier 2026</h2>
 
 <h3>🎾 Dimanche 18 janvier 2026 – Championnat : Victoire des Dames 45+ 🎾</h3>
 
@@ -597,13 +633,14 @@
 
     // Carrousels
     let currentSlides = {
+  'dames15mars2026': 0,
   'noel-enfants': 0,
   'salage': 0,
   'victoire': 0,
   '18juin': 0,
   'tournoi-ete': 0,
   '11janv2026': 0
-    };
+};
 
     function moveSlide(carousel, direction) {
       const carouselElement = document.querySelector(`#carousel-${carousel} .carousel-images`);
